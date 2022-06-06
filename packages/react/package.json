@@ -4,6 +4,7 @@
 	"main": "build/index.js",
 	"license": "MIT",
 	"scripts": {
+		"dev": "yarn build --watch",
 		"build": "rollup -c"
 	},
 	"devDependencies": {
