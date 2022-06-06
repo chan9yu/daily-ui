@@ -1,0 +1,25 @@
+{
+	"name": "design_system",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "changyuyeo <wry5533@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"lint-staged": {
+		"*/**.scss": "yarn lint:fix"
+	},
+	"scripts": {
+		"lint": "stylelint './styles/**/*.scss'",
+		"lint:fix": "yarn lint --fix",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.0",
+		"prettier": "^2.6.2",
+		"stylelint": "^14.8.5",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-sass-guidelines": "^9.0.1",
+		"stylelint-prettier": "^2.0.0"
+	}
+}
