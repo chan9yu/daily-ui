@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"build": "node src/scripts/build.js",
+		"build": "node scripts/build.js",
 		"dev": "nodemon --watch src --exec yarn build -e scss"
 	},
 	"dependencies": {
