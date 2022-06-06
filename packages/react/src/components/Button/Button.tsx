@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({ label }) => {
-	return <button>{label}</button>;
+	return <button className="rsup-button__container">{label}</button>;
 };
 
 export default Button;
