@@ -1,21 +1,30 @@
 {
-	"name": "design_system",
+	"name": "@rsup/core",
 	"version": "1.0.0",
 	"main": "index.js",
 	"author": "changyuyeo <wry5533@gmail.com>",
 	"license": "MIT",
 	"private": true,
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		],
+		"nohoist": [
+			"**/normalize-scss"
+		]
+	},
 	"lint-staged": {
-		"./styles/**/*.scss": "yarn lint:fix"
+		"**/*.scss": "yarn lint:fix"
 	},
 	"scripts": {
-		"lint": "stylelint './styles/**/*.scss'",
+		"lint": "stylelint '**/*.scss'",
 		"lint:fix": "yarn lint --fix",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"build": "yarn lerna run build"
 	},
-	"dependencies": {},
 	"devDependencies": {
 		"husky": "^8.0.1",
+		"lerna": "^5.0.0",
 		"lint-staged": "^13.0.0",
 		"prettier": "^2.6.2",
 		"stylelint": "^14.8.5",

@@ -17,17 +17,16 @@ const getComponents = () => {
 	types.forEach((type) => {
 		const allFiles = fs.readdirSync(`src/${type}`).map((f) => ({
 			input: `src/${type}/${f}`,
-			output: `build/${f.slice(0, -4) + "css"}`,
+			output: `build/${f.slice(0, -4) + "css"}`, //* scss -> css
 		}));
 
 		allComponents = [...allComponents, ...allFiles];
 	});
+
 	return allComponents;
 };
 
-// console.log(getComponents());
-
-//* scss compile
+//* scss compile func
 const compile = (filePath, fileName) => {
 	const result = sass.renderSync({
 		data: fs.readFileSync(path.resolve(filePath)).toString(),
