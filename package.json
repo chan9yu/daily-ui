@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"private": true,
 	"lint-staged": {
-		"*/**.scss": "yarn lint:fix"
+		"./styles/**/*.scss": "yarn lint:fix"
 	},
 	"scripts": {
 		"lint": "stylelint './styles/**/*.scss'",
