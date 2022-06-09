@@ -11,7 +11,8 @@
 			"playground"
 		],
 		"nohoist": [
-			"**/normalize-scss"
+			"**/normalize-scss",
+			"**/styled-components"
 		]
 	},
 	"lint-staged": {
@@ -34,5 +35,11 @@
 		"stylelint-config-prettier": "^9.0.3",
 		"stylelint-config-sass-guidelines": "^9.0.1",
 		"stylelint-prettier": "^2.0.0"
+	},
+	"dependencies": {
+		"@types/react": "^18.0.12",
+		"emotion": "^11.0.0",
+		"react": "^18.1.0",
+		"typescript": "^4.7.3"
 	}
 }
