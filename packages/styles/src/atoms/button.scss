@@ -1,8 +1,7 @@
-@import "foundation/all";
+@import 'foundation/all';
 
 .rsup-button__container {
-
-	background: $btn-primary-bg;
-	color: $btn-primary-color;
-	display: flex;
+  background: $btn-primary-bg;
+  color: $btn-primary-color;
+  display: flex;
 }

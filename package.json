@@ -19,8 +19,10 @@
     "**/*.scss": [
       "yarn lint:fix"
     ],
-    "**/*.{ts,tsx}": [
-      "prettier --write"
+    "**/*": [
+      "npx prettier --write .",
+      "git add .",
+      "git commit -m 'style: prettier format'"
     ]
   },
   "scripts": {
