@@ -21,8 +21,7 @@
     ],
     "**/*": [
       "npx prettier --write .",
-      "git add .",
-      "git commit -m 'style: prettier format'"
+      "git add ."
     ]
   },
   "scripts": {

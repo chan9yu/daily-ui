@@ -1,16 +1,7 @@
-/* global text colors */
-$body-text-color: var(--dse-body-text-color, $gray_22) !default;
-$body-bg-color: var(--dse-body-bg-color, $bg_color) !default;
-
-/* buttons */
-$btn-primary-color: var(--dse-btn-primary-color, $white) !default;
-$btn-primary-bg: var(--dse-btn-primary-bg, $primary) !default;
-$btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, $secondary) !default;
-
-/* forms */
-$form-color: var(--dse-form-color, $gray_22) !default;
-$form-bg: var(--dse-form-bg, $white) !default;
-$form-error-color: var(--dse-form-error-color, $danger) !default;
-$form-error-bg: var(--dse-form-error-border, $error_bg) !default;
-$form-error-border: var(--dse-form-error-border, $danger) !default;
-$form-border-focus-color: var(--dse-form-border-focus-color, $primary) !default;
+//* rsup colors
+$rsup-title-color: var(--rsup-title-color, $text-gray-800) !default;
+$rsup-description-color: var(--rsup-description-color, $text-gray-700) !default;
+$rsup-input-text-color: var(--rsup-input-text-color, $text-gray-900) !default;
+$rsup-guide-color: var(--rsup-title-color, $text-gray-600) !default;
+$rsup-point-color: var(--rsup-point-color, $blue-600) !default;
+$rsup-error-color: var(--rsup-error-color, $error-700) !default;
