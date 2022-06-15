@@ -1,35 +1,18 @@
-@mixin mobile-s {
-  @media (min-width: map-get($breakpoints, 'xs')) {
-    @content;
+//* 폰트 세팅 (폰트이름, 경로, 굵기, 스타일, 종류 - otf | ttf)
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: otf ttf) {
+  $src: null;
+  $formats: (
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+  @each $ext in $exts {
+    $format: map-get($formats, $ext);
+    $src: append($src, url(quote($path)) format(quote($format)), comma);
   }
-}
-
-@mixin mobile-m {
-  @media (min-width: map-get($breakpoints, 'sm')) {
-    @content;
-  }
-}
-
-@mixin mobile-l {
-  @media (min-width: map-get($breakpoints, 'md')) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: map-get($breakpoints, 'lg')) {
-    @content;
-  }
-}
-
-@mixin tablet-l {
-  @media (min-width: map-get($breakpoints, 'xl')) {
-    @content;
-  }
-}
-
-@mixin note-book {
-  @media (min-width: map-get($breakpoints, 'xxl')) {
-    @content;
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
   }
 }

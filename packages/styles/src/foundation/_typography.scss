@@ -1,16 +1,19 @@
 /* ----- body font family ----- */
-$body-font-family: var(--dse-body-font-family, $noto-sans) !default;
+$body-font-family: var(--rsup-body-font-family, $body-font-family) !default;
 
 /* ----- body text sizes ----- */
-$body-font-size: var(--dse-body-font-size, $fs-base) !default;
-$body-font-weight: var(--dse-body-font-weight, $fw-regular) !default;
+$body-font-size: var(--rsup-body-font-size, $fs-base) !default;
+$body-font-weight: var(--rsup-body-font-weight, $fw-regular) !default;
 
-/* ----- head text sizes ----- */
-$h-1-font-size: var(--dse-h-1-font-size, $h-1) !default;
-$h-2-font-size: var(--dse-h-2-font-size, $h-2) !default;
-$h-3-font-size: var(--dse-h-3-font-size, $h-3) !default;
+/* ----- title text sizes ----- */
+$h-1-font-size: var(--rsup-h-1-font-size, $fs-h-1) !default;
+$h-2-font-size: var(--rsup-h-2-font-size, $fs-h-2) !default;
+$h-3-font-size: var(--rsup-h-3-font-size, $fs-h-3) !default;
+$h-4-font-size: var(--rsup-h-4-font-size, $fs-h-3) !default;
+$h-5-font-size: var(--rsup-h-5-font-size, $fs-h-3) !default;
+$h-6-font-size: var(--rsup-h-6-font-size, $fs-h-3) !default;
 
-/* ----- head font weights ----- */
-$h-1-font-weight: var(--dse-h-1-font-weight, $fw-bold) !default;
-$h-2-font-weight: var(--dse-h-2-font-weight, $fw-bold) !default;
-$h-3-font-weight: var(--dse-h-3-font-weight, $fw-bold) !default;
+/* ----- title font weights ----- */
+$h-font-weight-light: var(--rsup-h-font-weight-light, $fw-light) !default;
+$h-font-weight-regular: var(--rsup-h-font-weight-regular, $fw-regular) !default;
+$h-font-weight-bold: var(--rsup-h-font-weight-bold, $fw-bold) !default;

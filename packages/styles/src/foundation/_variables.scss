@@ -71,38 +71,22 @@ $error-900: #710000;
  * 1. Noto Sans: https://fonts.googleapis.com/css?family=Noto+Sans
  * 2. Noto Sans KR: https://fonts.googleapis.com/css?family=Noto+Sans+KR
 */
-$noto-sans: 'Noto Sans KR', sans-serif;
+$body-font-family: 'NotoSansCJKkr', sans-serif;
 
 //* font sizes
-$fs-sm: 0.875rem; //* 14px
-$fs-base: 1rem; //* 16px
-$fs-lg: 1.125rem; //* 18px
-$fs-xl: 1.25rem; //* 20px
-$fs-xxl: 1.375rem; //* 22x
-$fs-xxxl: 1.5rem; //* 24px
+$fs-sm: 0.75rem; //* 12px
+$fs-base: 0.875rem; //* 14px
+$fs-lg: 1rem; //* 16px
 
 //* title font sizes
-$h-1: 2.5rem; //* 40px
-$h-2: 2.1875rem; //* 35px
-$h-3: 1.875rem; //* 30px
-$h-4: 1.875rem; //* 30px
-$h-5: 1.875rem; //* 30px
-$h-6: 1.875rem; //* 30px
+$fs-h-1: 1.5rem; //* 24px
+$fs-h-2: 1.25rem; //* 20px
+$fs-h-3: 1.125rem; //* 18px
+$fs-h-4: 0.875rem; //* 14px
+$fs-h-5: 0.8125rem; //* 13px
+$fs-h-6: 0.75rem; //* 12px
 
 //* font weights
-$fw-thin: 100;
 $fw-light: 300;
 $fw-regular: 400;
-$fw-medium: 500;
 $fw-bold: 700;
-
-/* Breakpoints */
-//* 320px | 375px | 425px | 768px | 1024px | 1440px
-$breakpoints: (
-  xs: 320px,
-  sm: 375px,
-  md: 425px,
-  lg: 768px,
-  xl: 1024px,
-  xxl: 1440px,
-);

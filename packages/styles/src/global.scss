@@ -1,8 +1,16 @@
 @import 'foundation/all';
 @import 'base/all';
 
-// body {
-//   font-family: $body-font-family;
-//   font-size: $body-font-size;
-//   font-weight: $body-font-weight;
-// }
+//* 폰트 설정
+@include font-face('NotoSansCJKkr', './fonts/NotoSansCJKkr-Black.otf', 900, null, otf);
+@include font-face('NotoSansCJKkr', './fonts/NotoSansCJKkr-Bold.otf', 700, null, otf);
+@include font-face('NotoSansCJKkr', './fonts/NotoSansCJKkr-Medium.otf', 500, null, otf);
+@include font-face('NotoSansCJKkr', './fonts/NotoSansCJKkr-Regular.otf', 400, null, otf);
+@include font-face('NotoSansCJKkr', './fonts/NotoSansCJKkr-Light.otf', 300, null, otf);
+@include font-face('NotoSansCJKkr', './fonts/NotoSansCJKkr-Thin.otf', 100, null, otf);
+
+body {
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+}
