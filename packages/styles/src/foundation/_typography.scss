@@ -1,8 +1,11 @@
 /* ----- body font family ----- */
-$body-font-family: var(--rsup-body-font-family, $body-font-family) !default;
+$body-font-family: var(--rsup-body-font-family, $noto-sans) !default;
 
 /* ----- body text sizes ----- */
-$body-font-size: var(--rsup-body-font-size, $fs-base) !default;
+$body-font-size-sm: var(--rsup-body-font-size, $fs-sm) !default;
+$body-font-size-base: var(--rsup-body-font-size, $fs-base) !default;
+$body-font-size-lg: var(--rsup-body-font-size, $fs-lg) !default;
+
 $body-font-weight: var(--rsup-body-font-weight, $fw-regular) !default;
 
 /* ----- title text sizes ----- */

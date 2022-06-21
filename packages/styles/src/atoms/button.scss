@@ -1,17 +1,40 @@
 @import 'foundation/all';
 
+$width: (
+  large: 106px,
+  middle: 86px,
+  small: 64px,
+);
+
+$heights: (
+  large: 40px,
+  middle: 32px,
+  small: 28px,
+);
+
+// @each $height, $value in $heights {
+//   .rsup-button__container--#{$height} {
+//     width: map-get($width, $height);
+//     height: $value;
+//     font-size: if($height == large, $fs, 12px);
+//   }
+// }
+
 .rsup-button__container {
-  background: $rsup-point-color;
+  background: $point-color;
   border: 0;
   border-radius: 4px;
-  color: #fff;
+  color: $white-text-color;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 12px;
-  transition: 500ms;
+  height: 40px;
+  transition: all 250ms ease;
+  width: 106px;
 
   &:hover {
     background-color: $blue-800;
+  }
+
+  &:active {
+    background-color: $blue-900;
   }
 }

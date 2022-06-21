@@ -65,13 +65,12 @@ $error-700: #f31c1c;
 $error-800: #b70000;
 $error-900: #710000;
 
+//* ect...
+$white: #fff;
+$blue-line: #42aaf1;
+
 /* -----Typoraphy----- */
-/*
- * font families
- * 1. Noto Sans: https://fonts.googleapis.com/css?family=Noto+Sans
- * 2. Noto Sans KR: https://fonts.googleapis.com/css?family=Noto+Sans+KR
-*/
-$body-font-family: 'NotoSansCJKkr', sans-serif;
+$noto-sans: 'NotoSansCJKkr', sans-serif;
 
 //* font sizes
 $fs-sm: 0.75rem; //* 12px
