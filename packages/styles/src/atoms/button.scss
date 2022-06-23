@@ -1,6 +1,6 @@
 @import 'foundation/all';
 
-$width: (
+$widths: (
   large: 106px,
   middle: 86px,
   small: 64px,
@@ -12,29 +12,79 @@ $heights: (
   small: 28px,
 );
 
-// @each $height, $value in $heights {
-//   .rsup-button__container--#{$height} {
-//     width: map-get($width, $height);
-//     height: $value;
-//     font-size: if($height == large, $fs, 12px);
-//   }
-// }
+$types: primary, default, dashed, text;
 
-.rsup-button__container {
-  background: $point-color;
-  border: 0;
+.rsup-btn {
   border-radius: 4px;
-  color: $white-text-color;
   cursor: pointer;
-  height: 40px;
   transition: all 250ms ease;
-  width: 106px;
 
-  &:hover {
-    background-color: $blue-800;
+  &--view-mode {
+    background-color: $white;
+    border: solid 1px $cool-gray-700;
+    border-radius: 17px;
+    cursor: pointer;
+    height: 30px;
+    transition: all 250ms ease;
+    width: 90px;
+
+    &:hover {
+      background-color: $cool-gray-200;
+    }
+
+    &:active {
+      background-color: $cool-gray-300;
+    }
   }
 
-  &:active {
-    background-color: $blue-900;
+  &:disabled {
+    cursor: default;
+  }
+}
+
+//* button size
+@each $height, $value in $heights {
+  .rsup-btn--size-#{$height} {
+    font-size: if($height == large, $fs-base, $fs-sm);
+    height: $value;
+    width: map-get($widths, $height);
+  }
+}
+
+//* button type (color)
+@each $type in $types {
+  .rsup-btn--type-#{$type} {
+    background-color: if($type == 'primary', $point-color, $white);
+    border: if(
+      $type == 'default',
+      1px solid $point-color,
+      if($type == 'dashed', 1px solid $cool-gray-700, 0)
+    );
+    color: if(
+      $type == 'primary',
+      $white-text-color,
+      if($type == 'default', $point-color, $text-gray-800)
+    );
+
+    &:hover {
+      background-color: if(
+        $type == 'primary',
+        $blue-800,
+        if($type == 'default', $blue-200, $cool-gray-200)
+      );
+    }
+
+    &:active {
+      background-color: if(
+        $type == 'primary',
+        $blue-900,
+        if($type == 'default', $blue-300, $cool-gray-300)
+      );
+    }
+
+    &:disabled {
+      background-color: if($type == 'primary', $cool-gray-700, $white);
+      filter: opacity(30%);
+    }
   }
 }

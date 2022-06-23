@@ -5,12 +5,12 @@ import '@rsup/styles/build/button.css';
 
 interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
   children: ReactNode;
-  block: boolean;
-  disabled: boolean;
+  block?: boolean;
+  disabled?: boolean;
   htmlType?: 'button' | 'submit' | 'reset';
-  type: 'primary' | 'default' | 'dashed' | 'text';
-  size: 'large' | 'middle' | 'small';
-  viewMode: boolean;
+  type?: 'primary' | 'default' | 'dashed' | 'text';
+  size?: 'large' | 'middle' | 'small';
+  viewMode?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -23,15 +23,20 @@ const Button: FC<ButtonProps> = ({
   viewMode = false,
   ...props
 }) => {
-  const base = 'rsup-button__container';
+  const base = 'rsup-btn';
   const className = classNames(
     base,
     { [`${base}--block`]: block },
     `${base}--type-${type}`,
     `${base}--size-${size}`,
+    { [`${base}--disabled`]: disabled },
   );
 
-  return (
+  return viewMode ? (
+    <button className={`${base}--view-mode`} {...props}>
+      {children}
+    </button>
+  ) : (
     <button className={className} disabled={disabled} type={htmlType} {...props}>
       {children}
     </button>

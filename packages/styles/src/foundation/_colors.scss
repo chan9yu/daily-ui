@@ -10,10 +10,10 @@ $error-color: var(--rsup-error-color, $error-700) !default;
 //* text colors
 $title-color: var(--rsup-title-color, $text-gray-800) !default;
 $white-text-color: var(--rsup-white-text-color, $white) !default;
-$blue-text-color: var(--rsup-blue-text-color, $blue-line) !default;
+$blue-text-color: var(--rsup-blue-text-color, $blue-light) !default;
 $black-text-color: var(--rsup-black-text-color, $text-gray-800) !default;
 
 $input-text-color: var(--rsup-input-text-color, $text-gray-900) !default;
 
 //* line colors
-$blue-line-color: var(--rsup-blue-line-color, $blue-line) !default;
+$blue-line-color: var(--rsup-blue-line-color, $blue-light) !default;
