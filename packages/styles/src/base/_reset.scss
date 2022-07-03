@@ -1,2 +1,15 @@
 // css reset (normalize css)
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
+
+* {
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

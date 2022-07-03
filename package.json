@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "changyuyeo <wry5533@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "private": true,
   "workspaces": {
     "packages": [
@@ -29,7 +30,9 @@
     "lint:fix": "yarn lint --fix",
     "prepare": "husky install",
     "dev": "yarn lerna run dev",
-    "build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "clean:logs": "bash ./scripts/clean-error-log.sh",
+    "clean:modules": "bash ./scripts/clean-node-modules.sh"
   },
   "dependencies": {},
   "devDependencies": {

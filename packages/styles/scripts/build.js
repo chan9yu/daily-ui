@@ -10,22 +10,22 @@ try {
   console.log('build 폴더가 존재합니다...');
 }
 
-const getComponents = () => {
-  let allComponents = [];
-  // const types = ['atoms', 'molecules'];
-  const types = ['atoms'];
+// const getComponents = () => {
+//   let allComponents = [];
+//   // const types = ['atoms', 'molecules'];
+//   const types = ['atoms'];
 
-  types.forEach((type) => {
-    const allFiles = fs.readdirSync(`src/${type}`).map((f) => ({
-      input: `src/${type}/${f}`,
-      output: `build/${f.slice(0, -4) + 'css'}`, //* scss -> css
-    }));
+//   types.forEach((type) => {
+//     const allFiles = fs.readdirSync(`src/${type}`).map((f) => ({
+//       input: `src/${type}/${f}`,
+//       output: `build/${f.slice(0, -4) + 'css'}`, //* scss -> css
+//     }));
 
-    allComponents = [...allComponents, ...allFiles];
-  });
+//     allComponents = [...allComponents, ...allFiles];
+//   });
 
-  return allComponents;
-};
+//   return allComponents;
+// };
 
 //* scss compile func
 const compile = (filePath, fileName) => {
@@ -40,4 +40,5 @@ const compile = (filePath, fileName) => {
 
 //* compile...
 compile('src/global.scss', 'build/global.css');
-getComponents().forEach((component) => compile(component.input, component.output));
+compile('src/styles.scss', 'build/styles.css');
+// getComponents().forEach((component) => compile(component.input, component.output));

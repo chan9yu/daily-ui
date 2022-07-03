@@ -1,19 +1,26 @@
-/* --- rsup colors --- */
-$description-color: var(--rsup-description-color, $text-gray-700) !default;
-$guide-color: var(--rsup-title-color, $text-gray-600) !default;
-$point-color: var(--rsup-point-color, $blue-600) !default;
-$error-color: var(--rsup-error-color, $error-700) !default;
+$rsup-primary: var(--rsup-primary, $blue-600) !default;
+$rsup-body-color: var(--rsup-body-color, $text-gray-800) !default;
+$rsup-body-bg: var(--rsup-body-bg, $white) !default;
 
-//* bg colors
-// $bg-blue-color: var(--rsup-);
+/* ----- primary colors ----- */
+$rsup-primary-100: var($blue-100) !default;
+$rsup-primary-200: var($blue-200) !default;
+$rsup-primary-300: var($blue-300) !default;
+$rsup-primary-400: var($blue-400) !default;
+$rsup-primary-500: var($blue-500) !default;
+// $rsup-primary-600
+$rsup-primary-700: var($blue-700) !default;
+$rsup-primary-800: var($blue-800) !default;
+$rsup-primary-900: var($blue-900) !default;
 
-//* text colors
-$title-color: var(--rsup-title-color, $text-gray-800) !default;
-$white-text-color: var(--rsup-white-text-color, $white) !default;
-$blue-text-color: var(--rsup-blue-text-color, $blue-light) !default;
-$black-text-color: var(--rsup-black-text-color, $text-gray-800) !default;
-
-$input-text-color: var(--rsup-input-text-color, $text-gray-900) !default;
-
-//* line colors
-$blue-line-color: var(--rsup-blue-line-color, $blue-light) !default;
+@if $rsup-primary != $blue-500 {
+  $rsup-primary-100: lighten($rsup-primary, 50%);
+  $rsup-primary-200: lighten($rsup-primary, 40%);
+  $rsup-primary-300: lighten($rsup-primary, 30%);
+  $rsup-primary-400: lighten($rsup-primary, 20%);
+  $rsup-primary-500: lighten($rsup-primary, 10%);
+  // $rsup-primary-500
+  $rsup-primary-700: darker($rsup-primary, 20%);
+  $rsup-primary-800: darker($rsup-primary, 30%);
+  $rsup-primary-900: darker($rsup-primary, 40%);
+}

@@ -1,24 +1,14 @@
 :root {
   // colors
-  --rsup-title-color: #{$text-gray-800};
-  --rsup-description-color: #{$text-gray-700};
-  --rsup-input-text-color: #{$text-gray-900};
-  --rsup-title-color: #{$text-gray-600};
-  --rsup-point-color: #{$blue-600};
-  --rsup-error-color: #{$error-700};
-  --rsup-white-text-color: #{$white};
+  // _colors 16 line
+  --rsup-primary: #{$rsup-primary};
+
+  --rsup-body-color: #{$rsup-body-color};
+  --rsup-body-bg: #{$rsup-body-bg};
 
   // typographys
-  --rsup-body-font-family: #{$body-font-family};
-  --rsup-body-font-size: #{$fs-base};
-  --rsup-body-font-weight: #{$fw-regular};
-  --rsup-h-1-font-size: #{$fs-h-1};
-  --rsup-h-2-font-size: #{$fs-h-2};
-  --rsup-h-3-font-size: #{$fs-h-3};
-  --rsup-h-4-font-size: #{$fs-h-3};
-  --rsup-h-5-font-size: #{$fs-h-3};
-  --rsup-h-6-font-size: #{$fs-h-3};
-  --rsup-h-font-weight-light: #{$fw-light};
-  --rsup-h-font-weight-regular: #{$fw-regular};
-  --rsup-h-font-weight-bold: #{$fw-bold};
+  --rsup-body-font-family: #{$rsup-body-font-family};
+  --rsup-body-font-size: #{$rsup-body-font-size};
+  --rsup-body-font-weight: #{$rsup-body-font-weight};
+  --rsup-body-line-height: #{$rsup-body-line-height};
 }
