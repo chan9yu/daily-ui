@@ -10,23 +10,6 @@ try {
   console.log('build 폴더가 존재합니다...');
 }
 
-// const getComponents = () => {
-//   let allComponents = [];
-//   // const types = ['atoms', 'molecules'];
-//   const types = ['atoms'];
-
-//   types.forEach((type) => {
-//     const allFiles = fs.readdirSync(`src/${type}`).map((f) => ({
-//       input: `src/${type}/${f}`,
-//       output: `build/${f.slice(0, -4) + 'css'}`, //* scss -> css
-//     }));
-
-//     allComponents = [...allComponents, ...allFiles];
-//   });
-
-//   return allComponents;
-// };
-
 //* scss compile func
 const compile = (filePath, fileName) => {
   const result = sass.renderSync({
@@ -38,7 +21,5 @@ const compile = (filePath, fileName) => {
   fs.writeFileSync(path.resolve(fileName), result.css.toString());
 };
 
-//* compile...
+//* scss 컴파일
 compile('src/global.scss', 'build/global.css');
-compile('src/styles.scss', 'build/styles.css');
-// getComponents().forEach((component) => compile(component.input, component.output));

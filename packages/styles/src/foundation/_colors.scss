@@ -1,26 +1,201 @@
-$rsup-primary: var(--rsup-primary, $blue-600) !default;
-$rsup-body-color: var(--rsup-body-color, $text-gray-800) !default;
-$rsup-body-bg: var(--rsup-body-bg, $white) !default;
+/* ----- color system ----- */
+/* ----- gray color variables ----- */
 
-/* ----- primary colors ----- */
-$rsup-primary-100: var($blue-100) !default;
-$rsup-primary-200: var($blue-200) !default;
-$rsup-primary-300: var($blue-300) !default;
-$rsup-primary-400: var($blue-400) !default;
-$rsup-primary-500: var($blue-500) !default;
-// $rsup-primary-600
-$rsup-primary-700: var($blue-700) !default;
-$rsup-primary-800: var($blue-800) !default;
-$rsup-primary-900: var($blue-900) !default;
+/* --- White & Black --- */
+$white: #fff !default;
+$black: #000 !default;
 
-@if $rsup-primary != $blue-500 {
-  $rsup-primary-100: lighten($rsup-primary, 50%);
-  $rsup-primary-200: lighten($rsup-primary, 40%);
-  $rsup-primary-300: lighten($rsup-primary, 30%);
-  $rsup-primary-400: lighten($rsup-primary, 20%);
-  $rsup-primary-500: lighten($rsup-primary, 10%);
-  // $rsup-primary-500
-  $rsup-primary-700: darker($rsup-primary, 20%);
-  $rsup-primary-800: darker($rsup-primary, 30%);
-  $rsup-primary-900: darker($rsup-primary, 40%);
-}
+/* --- Cool Gray (Background/Line) --- */
+//* Variabels
+$cool-gray-100: #fafbfc !default;
+$cool-gray-200: #f7f8f9 !default;
+$cool-gray-300: #eff2f3 !default;
+$cool-gray-400: #e7ecee !default;
+$cool-gray-500: #d8dde1 !default;
+$cool-gray-600: #cbd1d6 !default;
+$cool-gray-700: #bec3c8 !default;
+$cool-gray-800: #a9adb0 !default;
+$cool-gray-900: #8e9091 !default;
+
+//* Map
+$cool-gray: (
+  '100': $cool-gray-100,
+  '200': $cool-gray-200,
+  '300': $cool-gray-300,
+  '400': $cool-gray-400,
+  '500': $cool-gray-500,
+  '600': $cool-gray-600,
+  '700': $cool-gray-700,
+  '800': $cool-gray-800,
+  '900': $cool-gray-900,
+) !default;
+
+/* --- Warm Gray (Warm Gray/Icon) --- */
+//* Variabels
+$warm-gray-100: #eee !default;
+$warm-gray-200: #ddd !default;
+$warm-gray-300: #d2d2d2 !default;
+$warm-gray-400: #acacac !default;
+$warm-gray-500: #999 !default;
+$warm-gray-600: #777 !default;
+$warm-gray-700: #666 !default;
+$warm-gray-800: #4b4b4b !default;
+$warm-gray-900: #333 !default;
+
+//* Map
+$warm-gray: (
+  '100': $warm-gray-100,
+  '200': $warm-gray-200,
+  '300': $warm-gray-300,
+  '400': $warm-gray-400,
+  '500': $warm-gray-500,
+  '600': $warm-gray-600,
+  '700': $warm-gray-700,
+  '800': $warm-gray-800,
+  '900': $warm-gray-900,
+) !default;
+
+/* --- Warm Gray (Warm Gray/Icon) --- */
+//* Variabels
+$text-gray-100: #fafbfc !default;
+$text-gray-200: #f7f8f9 !default;
+$text-gray-300: #eff2f3 !default;
+$text-gray-400: #dee0e1 !default;
+$text-gray-500: #b9bdc1 !default;
+$text-gray-600: #93999e !default;
+$text-gray-700: #64686c !default;
+$text-gray-800: #2c3137 !default;
+$text-gray-900: #0f1114 !default;
+
+//* Map
+$text-gray: (
+  '100': $text-gray-100,
+  '200': $text-gray-200,
+  '300': $text-gray-300,
+  '400': $text-gray-400,
+  '500': $text-gray-500,
+  '600': $text-gray-600,
+  '700': $text-gray-700,
+  '800': $text-gray-800,
+  '900': $text-gray-900,
+) !default;
+
+/* --- Colors --- */
+//* Variabels
+$blue: #83cdff !default;
+$green: #87ea30 !default;
+$red: #ff8f90 !default;
+
+//* Map
+$colors: (
+  'blue': $blue,
+  'green': $green,
+  'red': $red,
+) !default;
+
+/* --- 색상 단계 조정, 팔레트 만들기 --- */
+$min-contrast-ratio: 4.5 !default;
+
+$color-contrast-light: $white !default;
+$color-contrast-dark: $black !default;
+
+/* --- Blue --- */
+//* Variabels
+$blue-100: tint-color($blue, 80%) !default;
+$blue-200: tint-color($blue, 60%) !default;
+$blue-300: tint-color($blue, 40%) !default;
+$blue-400: tint-color($blue, 20%) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 20%) !default;
+$blue-700: shade-color($blue, 40%) !default;
+$blue-800: shade-color($blue, 60%) !default;
+$blue-900: shade-color($blue, 80%) !default;
+
+//* Map
+$blues: (
+  'blue-100': $blue-100,
+  'blue-200': $blue-200,
+  'blue-300': $blue-300,
+  'blue-400': $blue-400,
+  'blue-500': $blue-500,
+  'blue-600': $blue-600,
+  'blue-700': $blue-700,
+  'blue-800': $blue-800,
+  'blue-900': $blue-900,
+) !default;
+
+/* --- Green --- */
+//* Variabels
+$green-100: tint-color($green, 80%) !default;
+$green-200: tint-color($green, 60%) !default;
+$green-300: tint-color($green, 40%) !default;
+$green-400: tint-color($green, 20%) !default;
+$green-500: $green !default;
+$green-600: shade-color($green, 20%) !default;
+$green-700: shade-color($green, 40%) !default;
+$green-800: shade-color($green, 60%) !default;
+$green-900: shade-color($green, 80%) !default;
+
+//* Map
+$greens: (
+  'green-100': $green-100,
+  'green-200': $green-200,
+  'green-300': $green-300,
+  'green-400': $green-400,
+  'green-500': $green-500,
+  'green-600': $green-600,
+  'green-700': $green-700,
+  'green-800': $green-800,
+  'green-900': $green-900,
+) !default;
+
+/* --- Red --- */
+//* Variabels
+$red-100: tint-color($red, 80%) !default;
+$red-200: tint-color($red, 60%) !default;
+$red-300: tint-color($red, 40%) !default;
+$red-400: tint-color($red, 20%) !default;
+$red-500: $red !default;
+$red-600: shade-color($red, 20%) !default;
+$red-700: shade-color($red, 40%) !default;
+$red-800: shade-color($red, 60%) !default;
+$red-900: shade-color($red, 80%) !default;
+
+//* Map
+$reds: (
+  'red-100': $red-100,
+  'red-200': $red-200,
+  'red-300': $red-300,
+  'red-400': $red-400,
+  'red-500': $red-500,
+  'red-600': $red-600,
+  'red-700': $red-700,
+  'red-800': $red-800,
+  'red-900': $red-900,
+) !default;
+
+/* --- rsup theme colors variabels ---*/
+//* Variabels
+$primary: $blue-600 !default;
+$secondary: $warm-gray-600 !default;
+$success: $green !default;
+$error: $red-700 !default;
+$title: $text-gray-800 !default;
+$description: $text-gray-700 !default;
+$input-text: $text-gray-900 !default;
+$guide-text: $text-gray-600 !default;
+
+//* Map
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'error': $error,
+  'title': $title,
+  'description': $description,
+  'input-text': $input-text,
+  'guide-text': $guide-text,
+) !default;
+
+$body-bg: $white !default;
+$body-color: $text-gray-800 !default;

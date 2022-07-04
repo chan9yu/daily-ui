@@ -1,14 +1,26 @@
+// 최상단 css 변수 설정
 :root {
-  // colors
-  // _colors 16 line
-  --rsup-primary: #{$rsup-primary};
+  // color 변수 설정
+  @each $color, $value in $colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
 
-  --rsup-body-color: #{$rsup-body-color};
-  --rsup-body-bg: #{$rsup-body-bg};
+  @each $color, $value in $cool-gray {
+    --#{$prefix}cool-gray-#{$color}: #{$value};
+  }
 
-  // typographys
-  --rsup-body-font-family: #{$rsup-body-font-family};
-  --rsup-body-font-size: #{$rsup-body-font-size};
-  --rsup-body-font-weight: #{$rsup-body-font-weight};
-  --rsup-body-line-height: #{$rsup-body-line-height};
+  @each $color, $value in $warm-gray {
+    --#{$prefix}warm-gray-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $text-gray {
+    --#{$prefix}text-gray-#{$color}: #{$value};
+  }
+
+  // body 변수 설정
+  --#{$prefix}body-bg-color: #{$body-bg};
+  --#{$prefix}body-font-family: #{$noto-sans};
+  --#{$prefix}body-font-size: #{$fs-base};
+  --#{$prefix}body-font-weight: #{$fw-regular};
+  --#{$prefix}body-line-height: #{$lh-base};
 }

@@ -1,5 +1,46 @@
-/* ----- body font family ----- */
-$rsup-body-font-family: var(--rsup-body-font-family, $font-sans-serif) !default;
-$rsup-body-font-size: var(--rsup-body-font-size, $fs-base) !default;
-$rsup-body-font-weight: var(--rsup-body-font-weight, $fw-regular) !default;
-$rsup-body-line-height: var(--rsup-body-line-height, $lh-base) !default;
+/* --- font family --- */
+$noto-sans: 'Noto Sans', sans-serif !default;
+
+/* --- font sizes --- */
+$fs-base: 1rem !default; //* 16px
+$fs-xs: $fs-base * 0.75 !default; //* 12px
+$fs-sm: $fs-base * 0.875 !default; //* 14px
+$fs-lg: $fs-base * 1.125 !default; //* 18px
+$fs-xl: $fs-base * 1.25 !default; //* 20px
+
+$fs: (
+  'xs': $fs-xs,
+  'sm': $fs-sm,
+  'base': $fs-base,
+  'lg': $fs-lg,
+  'xl': $fs-xl,
+) !default;
+
+/* --- title font sizes --- */
+$h1-fs: 2.5rem !default; //* 40px
+$h2-fs: 2rem !default; //* 32px
+$h3-fs: 1.75rem !default; //* 28px
+$h4-fs: 1.5rem !default; //* 24px
+$h5-fs: 1.25rem !default; //* 20px
+$h6-fs: 1rem !default; //* 16px
+
+$h-fs: (
+  '1': $h1-fs,
+  '2': $h2-fs,
+  '3': $h3-fs,
+  '4': $h4-fs,
+  '5': $h5-fs,
+  '6': $h6-fs,
+) !default;
+
+/* --- font weights --- */
+$fw-thin: 100 !default;
+$fw-light: 300 !default;
+$fw-regular: 400 !default;
+$fw-medium: 500 !default;
+$fw-bold: 700 !default;
+
+/* --- line-height --- */
+$lh-base: 1.5 !default;
+$lh-sm: 1.25 !default;
+$lh-lg: 2 !default;

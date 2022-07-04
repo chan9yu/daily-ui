@@ -1,5 +1,10 @@
+//* Configuration
 @import 'foundation/all';
 @import 'base/all';
+@import 'mixin/all';
+
+//* Components
+@import 'atoms/button.module';
 
 //* 폰트 설정
 // @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Black.otf', 900, null, otf);
@@ -10,10 +15,9 @@
 // @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Thin.otf', 100, null, otf);
 
 body {
-  * {
-    font-family: $rsup-body-font-family;
-    font-size: $rsup-body-font-size;
-    font-weight: $rsup-body-font-weight;
-    line-height: $rsup-body-line-height;
-  }
+  background-color: var(--#{$prefix}body-bg-color);
+  font-family: var(--#{$prefix}body-font-famil);
+  font-size: var(--#{$prefix}body-font-size);
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}body-line-height);
 }

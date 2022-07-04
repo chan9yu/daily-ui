@@ -1,0 +1,110 @@
+@import 'foundation/all';
+
+$sizes: (
+  large: 40px,
+  middle: 32px,
+  small: 28px,
+);
+
+$types: 'primary', 'default', 'dashed', 'text';
+
+// $bg-colors: (
+//   'primary': $rsup-primary,
+//   'default': transparent,
+//   'dashed': transparent,
+//   'text': transparent,
+// );
+
+// $bg-colors--hover: (
+//   'primary': $rsup-primary-800,
+//   'default': $rsup-primary-200,
+//   'dashed': $cool-gray-200,
+//   'text': $cool-gray-200,
+// );
+
+// $bg-colors--active: (
+//   'primary': $rsup-primary-900,
+//   'default': $rsup-primary-300,
+//   'dashed': $cool-gray-300,
+//   'text': $cool-gray-300,
+// );
+
+// $colors: (
+//   'primary': $white,
+//   'default': $rsup-primary,
+//   'dashed': $rsup-body-color,
+//   'text': $rsup-body-color,
+// );
+
+// $border-colors: (
+//   'primary': 0,
+//   'default': 1px solid $rsup-primary,
+//   'dashed': 1px solid $cool-gray-700,
+//   'text': 0,
+// );
+
+// .rsup-btn {
+//   align-items: center;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   transition: all 250ms ease;
+
+//   &--full-size {
+//     width: 100%;
+//   }
+
+//   &--view-mode {
+//     background-color: $white;
+//     border: solid 1px $cool-gray-700;
+//     border-radius: 17px;
+//     cursor: pointer;
+//     height: 30px;
+//     transition: all 250ms ease;
+//     width: 90px;
+
+//     &:hover {
+//       background-color: $cool-gray-200;
+//     }
+
+//     &:active {
+//       background-color: $cool-gray-300;
+//     }
+//   }
+
+//   &:disabled {
+//     cursor: default;
+//   }
+// }
+
+// //* button size
+// @each $key, $value in $sizes {
+//   .rsup-btn--size-#{$key} {
+//     font-size: if($key == 'large', $fs-base, $fs-sm);
+//     height: $value;
+//     padding: if($key == 'large', 20px, if($key == 'middle', 16px, 12px));
+//   }
+// }
+
+// //* button type (color styled)
+// @each $type in $types {
+//   .rsup-btn--type-#{$type} {
+//     background-color: map-get($bg-colors, $type);
+//     border: map-get($border-colors, $type);
+//     color: map-get($colors, $type);
+
+//     &:hover {
+//       background-color: map-get($bg-colors--hover, $type);
+//     }
+
+//     &:active {
+//       background-color: map-get($bg-colors--active, $type);
+//     }
+
+//     &:disabled {
+//       // background-color: if($type == 'primary', $cool-gray-700, $white);
+//       filter: opacity(30%);
+//     }
+//   }
+// }
