@@ -1,0 +1,10 @@
+/* --- button --- */
+$button-theme: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'error': $error,
+  'default': '',
+  'gray': '',
+  'text': '',
+) !default;

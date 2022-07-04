@@ -1,0 +1,23 @@
+/* --- 최상단 변수에 대한 prefix 지정 --- */
+$varibale-prefix: rsup- !default;
+$prefix: $varibale-prefix !default;
+
+/* --- border --- */
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+$border-width: map-get($border-widths, 1) !default;
+$border-style: solid !default;
+$border-color: $cool-gray-700 !default;
+
+$border-radius-sm: 0.25rem !default; //* 4px
+$border-radius-base: 0.375rem !default; //* 6px
+$border-radius-lg: 0.5rem !default; //* 8px
+$border-radius-xl: 1rem !default; //* 16px
+$border-radius-xxl: 2rem !default; //* 32px
+$border-radius-round: 50% !default; //* 50%

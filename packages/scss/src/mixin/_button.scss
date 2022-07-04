@@ -1,0 +1,38 @@
+//* button 타입에 따른 변수 설정 (default, hover, active, disabled)
+@mixin button-foundation(
+  $background,
+  $color,
+  $border,
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  $active-background,
+  $active-color,
+  $active-border,
+  $disabled-background,
+  $disabled-color,
+  $disabled-border
+) {
+  --#{$prefix}btn-bg: #{$background};
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-border-color: #{$border};
+
+  --#{$prefix}btn-hover-bg: #{$hover-background};
+  --#{$prefix}btn-hover-color: #{$hover-color};
+  --#{$prefix}btn-hover-border-color: #{$hover-border};
+
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-active-color: #{$active-color};
+  --#{$prefix}btn-active-border-color: #{$active-border};
+
+  --#{$prefix}btn-disabled-bg: #{$disabled-background};
+  --#{$prefix}btn-disabled-color: #{$disabled-color};
+  --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  --#{$prefix}btn-padding-y: #{$padding-y};
+  --#{$prefix}btn-padding-x: #{$padding-x};
+  --#{$prefix}btn-font-size: #{$font-size};
+  --#{$prefix}btn-border-radius: #{$border-radius};
+}

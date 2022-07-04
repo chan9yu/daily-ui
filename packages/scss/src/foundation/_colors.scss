@@ -1,12 +1,8 @@
-/* ----- color system ----- */
-/* ----- gray color variables ----- */
-
 /* --- White & Black --- */
 $white: #fff !default;
 $black: #000 !default;
 
 /* --- Cool Gray (Background/Line) --- */
-//* Variabels
 $cool-gray-100: #fafbfc !default;
 $cool-gray-200: #f7f8f9 !default;
 $cool-gray-300: #eff2f3 !default;
@@ -17,7 +13,6 @@ $cool-gray-700: #bec3c8 !default;
 $cool-gray-800: #a9adb0 !default;
 $cool-gray-900: #8e9091 !default;
 
-//* Map
 $cool-gray: (
   '100': $cool-gray-100,
   '200': $cool-gray-200,
@@ -31,7 +26,6 @@ $cool-gray: (
 ) !default;
 
 /* --- Warm Gray (Warm Gray/Icon) --- */
-//* Variabels
 $warm-gray-100: #eee !default;
 $warm-gray-200: #ddd !default;
 $warm-gray-300: #d2d2d2 !default;
@@ -42,7 +36,6 @@ $warm-gray-700: #666 !default;
 $warm-gray-800: #4b4b4b !default;
 $warm-gray-900: #333 !default;
 
-//* Map
 $warm-gray: (
   '100': $warm-gray-100,
   '200': $warm-gray-200,
@@ -56,7 +49,6 @@ $warm-gray: (
 ) !default;
 
 /* --- Warm Gray (Warm Gray/Icon) --- */
-//* Variabels
 $text-gray-100: #fafbfc !default;
 $text-gray-200: #f7f8f9 !default;
 $text-gray-300: #eff2f3 !default;
@@ -67,7 +59,6 @@ $text-gray-700: #64686c !default;
 $text-gray-800: #2c3137 !default;
 $text-gray-900: #0f1114 !default;
 
-//* Map
 $text-gray: (
   '100': $text-gray-100,
   '200': $text-gray-200,
@@ -81,26 +72,17 @@ $text-gray: (
 ) !default;
 
 /* --- Colors --- */
-//* Variabels
 $blue: #83cdff !default;
 $green: #87ea30 !default;
 $red: #ff8f90 !default;
 
-//* Map
 $colors: (
   'blue': $blue,
   'green': $green,
   'red': $red,
 ) !default;
 
-/* --- 색상 단계 조정, 팔레트 만들기 --- */
-$min-contrast-ratio: 4.5 !default;
-
-$color-contrast-light: $white !default;
-$color-contrast-dark: $black !default;
-
 /* --- Blue --- */
-//* Variabels
 $blue-100: tint-color($blue, 80%) !default;
 $blue-200: tint-color($blue, 60%) !default;
 $blue-300: tint-color($blue, 40%) !default;
@@ -111,7 +93,6 @@ $blue-700: shade-color($blue, 40%) !default;
 $blue-800: shade-color($blue, 60%) !default;
 $blue-900: shade-color($blue, 80%) !default;
 
-//* Map
 $blues: (
   'blue-100': $blue-100,
   'blue-200': $blue-200,
@@ -125,7 +106,6 @@ $blues: (
 ) !default;
 
 /* --- Green --- */
-//* Variabels
 $green-100: tint-color($green, 80%) !default;
 $green-200: tint-color($green, 60%) !default;
 $green-300: tint-color($green, 40%) !default;
@@ -136,7 +116,6 @@ $green-700: shade-color($green, 40%) !default;
 $green-800: shade-color($green, 60%) !default;
 $green-900: shade-color($green, 80%) !default;
 
-//* Map
 $greens: (
   'green-100': $green-100,
   'green-200': $green-200,
@@ -150,7 +129,6 @@ $greens: (
 ) !default;
 
 /* --- Red --- */
-//* Variabels
 $red-100: tint-color($red, 80%) !default;
 $red-200: tint-color($red, 60%) !default;
 $red-300: tint-color($red, 40%) !default;
@@ -161,7 +139,6 @@ $red-700: shade-color($red, 40%) !default;
 $red-800: shade-color($red, 60%) !default;
 $red-900: shade-color($red, 80%) !default;
 
-//* Map
 $reds: (
   'red-100': $red-100,
   'red-200': $red-200,
@@ -175,7 +152,6 @@ $reds: (
 ) !default;
 
 /* --- rsup theme colors variabels ---*/
-//* Variabels
 $primary: $blue-600 !default;
 $secondary: $warm-gray-600 !default;
 $success: $green !default;
@@ -185,7 +161,6 @@ $description: $text-gray-700 !default;
 $input-text: $text-gray-900 !default;
 $guide-text: $text-gray-600 !default;
 
-//* Map
 $theme-colors: (
   'primary': $primary,
   'secondary': $secondary,
@@ -197,5 +172,6 @@ $theme-colors: (
   'guide-text': $guide-text,
 ) !default;
 
+/* --- body colors --- */
 $body-bg: $white !default;
 $body-color: $text-gray-800 !default;

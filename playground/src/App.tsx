@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import '@rsup/styles/build/global.css';
+import '@rsup/scss/build/global.css';
 
 const Container = styled.div`
   width: 80%;
