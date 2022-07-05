@@ -11,23 +11,11 @@
     --#{$prefix}#{$color}-color: #{$value};
   }
 
-  // @each $color, $value in $cool-gray {
-  //   --#{$prefix}cool-gray-#{$color}: #{$value};
-  // }
-
-  // @each $color, $value in $warm-gray {
-  //   --#{$prefix}warm-gray-#{$color}: #{$value};
-  // }
-
-  // @each $color, $value in $text-gray {
-  //   --#{$prefix}text-gray-#{$color}: #{$value};
-  // }
-
-  // body 변수 설정
   --#{$prefix}body-bg-color: #{$body-bg};
   --#{$prefix}body-color: #{$body-color};
-  --#{$prefix}body-font-family: #{$noto-sans};
-  --#{$prefix}body-font-size: #{$fs-base};
-  --#{$prefix}body-font-weight: #{$fw-regular};
-  --#{$prefix}body-line-height: #{$lh-base};
+
+  --#{$prefix}body-font-family: #{$body-font-family};
+  --#{$prefix}body-font-size: #{$body-font-size};
+  --#{$prefix}body-font-weight: #{$body-font-weight};
+  --#{$prefix}body-line-height: #{$body-line-height};
 }

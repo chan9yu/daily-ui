@@ -1,17 +1,19 @@
 /* --- font family --- */
 $noto-sans: 'Noto Sans', sans-serif !default;
+$body-font-family: var(--#{$prefix}body-font-family, $noto-sans) !default;
 
 /* --- font sizes --- */
 $fs-base: 1rem !default; //* 16px
-$fs-xs: $fs-base * 0.75 !default; //* 12px
-$fs-sm: $fs-base * 0.875 !default; //* 14px
-$fs-lg: $fs-base * 1.125 !default; //* 18px
-$fs-xl: $fs-base * 1.25 !default; //* 20px
+$body-font-size: var(--#{$prefix}body-font-size, $fs-base) !default;
+$fs-xs: calc($fs-base * 0.75) !default; //* 12px
+$fs-sm: calc($fs-base * 0.875) !default; //* 14px
+$fs-lg: calc($fs-base * 1.125) !default; //* 18px
+$fs-xl: calc($fs-base * 1.25) !default; //* 20px
 
 $fs: (
   'xs': $fs-xs,
   'sm': $fs-sm,
-  'base': $fs-base,
+  'base': $body-font-size,
   'lg': $fs-lg,
   'xl': $fs-xl,
 ) !default;
@@ -39,8 +41,10 @@ $fw-light: 300 !default;
 $fw-regular: 400 !default;
 $fw-medium: 500 !default;
 $fw-bold: 700 !default;
+$body-font-weight: var(--#{$prefix}body-font-weight, $fw-regular) !default;
 
 /* --- line-height --- */
 $lh-base: 1.5 !default;
 $lh-sm: 1.25 !default;
 $lh-lg: 2 !default;
+$body-line-height: $lh-base !default;
