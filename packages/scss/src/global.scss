@@ -1,7 +1,6 @@
 //* Configuration
 @import 'foundation/all';
 @import 'base/all';
-@import 'mixin/all';
 
 //* Components
 @import 'atoms/button.module';
@@ -16,6 +15,7 @@
 
 body {
   background-color: var(--#{$prefix}body-bg-color);
+  color: var(--#{$prefix}body-color);
   font-family: var(--#{$prefix}body-font-famil);
   font-size: var(--#{$prefix}body-font-size);
   font-weight: var(--#{$prefix}body-font-weight);

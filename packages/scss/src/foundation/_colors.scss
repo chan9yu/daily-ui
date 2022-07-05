@@ -1,8 +1,7 @@
-/* --- White & Black --- */
+/* --- Gray Colors --- */
 $white: #fff !default;
 $black: #000 !default;
 
-/* --- Cool Gray (Background/Line) --- */
 $cool-gray-100: #fafbfc !default;
 $cool-gray-200: #f7f8f9 !default;
 $cool-gray-300: #eff2f3 !default;
@@ -13,19 +12,6 @@ $cool-gray-700: #bec3c8 !default;
 $cool-gray-800: #a9adb0 !default;
 $cool-gray-900: #8e9091 !default;
 
-$cool-gray: (
-  '100': $cool-gray-100,
-  '200': $cool-gray-200,
-  '300': $cool-gray-300,
-  '400': $cool-gray-400,
-  '500': $cool-gray-500,
-  '600': $cool-gray-600,
-  '700': $cool-gray-700,
-  '800': $cool-gray-800,
-  '900': $cool-gray-900,
-) !default;
-
-/* --- Warm Gray (Warm Gray/Icon) --- */
 $warm-gray-100: #eee !default;
 $warm-gray-200: #ddd !default;
 $warm-gray-300: #d2d2d2 !default;
@@ -36,19 +22,6 @@ $warm-gray-700: #666 !default;
 $warm-gray-800: #4b4b4b !default;
 $warm-gray-900: #333 !default;
 
-$warm-gray: (
-  '100': $warm-gray-100,
-  '200': $warm-gray-200,
-  '300': $warm-gray-300,
-  '400': $warm-gray-400,
-  '500': $warm-gray-500,
-  '600': $warm-gray-600,
-  '700': $warm-gray-700,
-  '800': $warm-gray-800,
-  '900': $warm-gray-900,
-) !default;
-
-/* --- Warm Gray (Warm Gray/Icon) --- */
 $text-gray-100: #fafbfc !default;
 $text-gray-200: #f7f8f9 !default;
 $text-gray-300: #eff2f3 !default;
@@ -58,31 +31,19 @@ $text-gray-600: #93999e !default;
 $text-gray-700: #64686c !default;
 $text-gray-800: #2c3137 !default;
 $text-gray-900: #0f1114 !default;
+/* --- Gray Colors End --- */
 
-$text-gray: (
-  '100': $text-gray-100,
-  '200': $text-gray-200,
-  '300': $text-gray-300,
-  '400': $text-gray-400,
-  '500': $text-gray-500,
-  '600': $text-gray-600,
-  '700': $text-gray-700,
-  '800': $text-gray-800,
-  '900': $text-gray-900,
-) !default;
+/* --- Basic Colors --- */
+$blue: var(--#{$prefix}blue-color, #83cdff) !default;
+$green: var(--#{$prefix}green-color, #87ea30) !default;
+$red: var(--#{$prefix}red-color, #ff8f90) !default;
 
-/* --- Colors --- */
-$blue: #83cdff !default;
-$green: #87ea30 !default;
-$red: #ff8f90 !default;
-
-$colors: (
+$basic-colors: (
   'blue': $blue,
   'green': $green,
   'red': $red,
 ) !default;
 
-/* --- Blue --- */
 $blue-100: tint-color($blue, 80%) !default;
 $blue-200: tint-color($blue, 60%) !default;
 $blue-300: tint-color($blue, 40%) !default;
@@ -93,19 +54,6 @@ $blue-700: shade-color($blue, 40%) !default;
 $blue-800: shade-color($blue, 60%) !default;
 $blue-900: shade-color($blue, 80%) !default;
 
-$blues: (
-  'blue-100': $blue-100,
-  'blue-200': $blue-200,
-  'blue-300': $blue-300,
-  'blue-400': $blue-400,
-  'blue-500': $blue-500,
-  'blue-600': $blue-600,
-  'blue-700': $blue-700,
-  'blue-800': $blue-800,
-  'blue-900': $blue-900,
-) !default;
-
-/* --- Green --- */
 $green-100: tint-color($green, 80%) !default;
 $green-200: tint-color($green, 60%) !default;
 $green-300: tint-color($green, 40%) !default;
@@ -116,19 +64,6 @@ $green-700: shade-color($green, 40%) !default;
 $green-800: shade-color($green, 60%) !default;
 $green-900: shade-color($green, 80%) !default;
 
-$greens: (
-  'green-100': $green-100,
-  'green-200': $green-200,
-  'green-300': $green-300,
-  'green-400': $green-400,
-  'green-500': $green-500,
-  'green-600': $green-600,
-  'green-700': $green-700,
-  'green-800': $green-800,
-  'green-900': $green-900,
-) !default;
-
-/* --- Red --- */
 $red-100: tint-color($red, 80%) !default;
 $red-200: tint-color($red, 60%) !default;
 $red-300: tint-color($red, 40%) !default;
@@ -138,40 +73,76 @@ $red-600: shade-color($red, 20%) !default;
 $red-700: shade-color($red, 40%) !default;
 $red-800: shade-color($red, 60%) !default;
 $red-900: shade-color($red, 80%) !default;
+/* --- Basic Colors End --- */
 
-$reds: (
-  'red-100': $red-100,
-  'red-200': $red-200,
-  'red-300': $red-300,
-  'red-400': $red-400,
-  'red-500': $red-500,
-  'red-600': $red-600,
-  'red-700': $red-700,
-  'red-800': $red-800,
-  'red-900': $red-900,
+/* --- Text Colors --- */
+$title: var(--#{$prefix}title-color, $text-gray-800) !default;
+$description: var(--#{$prefix}description-color, $text-gray-700) !default;
+$input-text: var(--#{$prefix}input-text-color, $text-gray-900) !default;
+$guide-text: var(--#{$prefix}guide-text-color, $text-gray-600) !default;
+
+$text-colors: (
+  'title': $title,
+  'description': $description,
+  'input-text': $input-text,
+  'guide-text': $guide-text,
 ) !default;
+/* --- Text Colors End --- */
 
-/* --- rsup theme colors variabels ---*/
-$primary: $blue-600 !default;
-$secondary: $warm-gray-600 !default;
-$success: $green !default;
-$error: $red-700 !default;
-$title: $text-gray-800 !default;
-$description: $text-gray-700 !default;
-$input-text: $text-gray-900 !default;
-$guide-text: $text-gray-600 !default;
+/* --- Theme Colors ---*/
+$primary: var(--#{$prefix}primary-color, $blue-600) !default;
+$secondary: var(--#{$prefix}secondary-color, $warm-gray-600) !default;
+$success: var(--#{$prefix}success-color, $green) !default;
+$error: var(--#{$prefix}error-color, $red-700) !default;
 
 $theme-colors: (
   'primary': $primary,
   'secondary': $secondary,
   'success': $success,
   'error': $error,
-  'title': $title,
-  'description': $description,
-  'input-text': $input-text,
-  'guide-text': $guide-text,
 ) !default;
 
+$primary-100: tint-color($primary, 80%) !default;
+$primary-200: tint-color($primary, 60%) !default;
+$primary-300: tint-color($primary, 40%) !default;
+$primary-400: tint-color($primary, 20%) !default;
+$primary-500: $primary !default;
+$primary-600: shade-color($primary, 20%) !default;
+$primary-700: shade-color($primary, 40%) !default;
+$primary-800: shade-color($primary, 60%) !default;
+$primary-900: shade-color($primary, 80%) !default;
+
+$secondary-100: tint-color($secondary, 80%) !default;
+$secondary-200: tint-color($secondary, 60%) !default;
+$secondary-300: tint-color($secondary, 40%) !default;
+$secondary-400: tint-color($secondary, 20%) !default;
+$secondary-500: $secondary !default;
+$secondary-600: shade-color($secondary, 20%) !default;
+$secondary-700: shade-color($secondary, 40%) !default;
+$secondary-800: shade-color($secondary, 60%) !default;
+$secondary-900: shade-color($secondary, 80%) !default;
+
+$success-100: tint-color($success, 80%) !default;
+$success-200: tint-color($success, 60%) !default;
+$success-300: tint-color($success, 40%) !default;
+$success-400: tint-color($success, 20%) !default;
+$success-500: $success !default;
+$success-600: shade-color($success, 20%) !default;
+$success-700: shade-color($success, 40%) !default;
+$success-800: shade-color($success, 60%) !default;
+$success-900: shade-color($success, 80%) !default;
+
+$error-100: tint-color($error, 80%) !default;
+$error-200: tint-color($error, 60%) !default;
+$error-300: tint-color($error, 40%) !default;
+$error-400: tint-color($error, 20%) !default;
+$error-500: $error !default;
+$error-600: shade-color($error, 20%) !default;
+$error-700: shade-color($error, 40%) !default;
+$error-800: shade-color($error, 60%) !default;
+$error-900: shade-color($error, 80%) !default;
+/* --- Theme Colors End ---*/
+
 /* --- body colors --- */
-$body-bg: $white !default;
-$body-color: $text-gray-800 !default;
+$body-bg: var(--rsup-body-bg-color, $white) !default;
+$body-color: var(--rsup-body-color, $text-gray-800) !default;
