@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Button } from '@rsup/react-ui';
 import '@rsup/scss/build/global.css';
 
 const Container = styled.div`
@@ -12,6 +13,10 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const App = () => <Container>teste</Container>;
+const App = () => (
+  <Container>
+    <Button>Normal</Button>
+  </Container>
+);
 
 export default App;

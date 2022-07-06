@@ -1,0 +1,67 @@
+@import 'foundation/all';
+@import '../mixins/button';
+
+.#{$prefix}btn {
+  --#{$prefix}btn-color: #{$btn-primary-color};
+
+  --#{$prefix}btn-bg: #{$btn-primary-bg};
+  --#{$prefix}btn-bg-hover: #{$btn-primary-bg-hover};
+  --#{$prefix}btn-bg-active: #{$btn-primary-bg-active};
+
+  --#{$prefix}btn-font-size: #{$btn-font-size};
+  --#{$prefix}btn-font-family: #{$btn-font-family};
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-line-height: #{$btn-line-height};
+
+  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-border-color: #{$btn-border-color};
+
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-transition: #{$btn-transition};
+  align-items: center;
+  cursor: pointer;
+
+  display: flex;
+
+  font-family: var(--#{$prefix}btn-font-family);
+  font-weight: var(--#{$prefix}btn-font-weight);
+  justify-content: center;
+  line-height: var(--#{$prefix}btn-line-height);
+  transition: var(--#{$prefix}btn-transition);
+
+  &:disabled {
+    opacity: var(--#{$prefix}btn-disabled-opacity);
+  }
+}
+
+.#{$prefix}btn--type-primary {
+  @include button-color(
+    $white,
+    royalblue,
+    mix($black, royalblue, $btn-hover-shade-amount),
+    mix($black, royalblue, $btn-active-shade-amount),
+    transparent
+  );
+  background-color: var(--#{$prefix}btn-bg);
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  color: var(--#{$prefix}btn-color);
+
+  &:hover {
+    background-color: var(--#{$prefix}btn-bg-hover);
+  }
+
+  &:active {
+    background-color: var(--#{$prefix}btn-bg-active);
+  }
+}
+
+.#{$prefix}btn--size-base {
+  border-radius: var(--#{$prefix}btn-border-radius);
+  font-size: var(--#{$prefix}btn-font-size);
+  padding: var(--#{$prefix}btn-padding-x) var(--#{$prefix}btn-padding-y);
+}

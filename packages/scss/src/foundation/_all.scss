@@ -2,6 +2,7 @@
 $varibale-prefix: rsup- !default;
 $prefix: $varibale-prefix !default;
 
+@import './functions';
 @import './colors';
 @import './typography';
 @import './variables';

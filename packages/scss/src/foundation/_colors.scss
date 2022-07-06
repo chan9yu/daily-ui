@@ -34,9 +34,9 @@ $text-gray-900: #0f1114 !default;
 /* --- Gray Colors End --- */
 
 /* --- Basic Colors --- */
-$blue: var(--#{$prefix}blue-color, #83cdff) !default;
-$green: var(--#{$prefix}green-color, #87ea30) !default;
-$red: var(--#{$prefix}red-color, #ff8f90) !default;
+$blue: #83cdff !default;
+$green: #87ea30 !default;
+$red: #ff8f90 !default;
 
 $basic-colors: (
   'blue': $blue,
@@ -90,10 +90,15 @@ $text-colors: (
 /* --- Text Colors End --- */
 
 /* --- Theme Colors ---*/
+// $primary: var(--#{$prefix}primary-color, $blue-600) !default;
+// $secondary: var(--#{$prefix}secondary-color, $warm-gray-600) !default;
+// $success: var(--#{$prefix}success-color, $green) !default;
+// $error: var(--#{$prefix}error-color, $red-700) !default;
+
 $primary: var(--#{$prefix}primary-color, $blue-600) !default;
-$secondary: var(--#{$prefix}secondary-color, $warm-gray-600) !default;
-$success: var(--#{$prefix}success-color, $green) !default;
-$error: var(--#{$prefix}error-color, $red-700) !default;
+$secondary: $warm-gray-600 !default;
+$success: $green !default;
+$error: $red-700 !default;
 
 $theme-colors: (
   'primary': $primary,
@@ -144,5 +149,5 @@ $error-900: shade-color($error, 80%) !default;
 /* --- Theme Colors End ---*/
 
 /* --- body colors --- */
-$body-bg: var(--rsup-body-bg-color, $white) !default;
-$body-color: var(--rsup-body-color, $text-gray-800) !default;
+$body-bg-color: var(--#{$prefix}-body-bg-color, $white) !default;
+$body-text-color: var(--#{$prefix}-body-text-color, $text-gray-800) !default;

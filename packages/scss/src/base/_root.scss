@@ -11,8 +11,8 @@
     --#{$prefix}#{$color}-color: #{$value};
   }
 
-  --#{$prefix}body-bg-color: #{$body-bg};
-  --#{$prefix}body-color: #{$body-color};
+  --#{$prefix}body-bg-color: #{$body-bg-color};
+  --#{$prefix}body-color: #{$body-text-color};
 
   --#{$prefix}body-font-family: #{$body-font-family};
   --#{$prefix}body-font-size: #{$body-font-size};

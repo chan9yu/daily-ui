@@ -1,43 +1,67 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import classNames from 'classnames';
 
-interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
+type ColorThemeType = {
+  primary: 'primary';
+  secondary: 'secondary';
+  success: 'success';
+  error: 'error';
+};
+
+type SizeType = {
+  xs: 'xs';
+  sm: 'sm';
+  base: 'base';
+  lg: 'lg';
+  xl: 'xl';
+  xxl: 'xxl';
+};
+
+type ButtonThemeType = {
+  default: 'default';
+  gray: 'gray';
+  text: 'text';
+} & ColorThemeType;
+
+type ButtonSizeType = Pick<SizeType, 'sm' | 'base' | 'lg'>;
+
+type ButtonHTMLType = ButtonHTMLAttributes<HTMLButtonElement>;
+
+interface ButtonProps extends Omit<ButtonHTMLType, 'type'> {
   className?: string;
   children: ReactNode;
-  disabled?: boolean;
   fullSize?: boolean;
-  htmlType?: 'button' | 'submit' | 'reset';
-  type?: 'primary' | 'default' | 'dashed' | 'text';
-  size?: 'large' | 'middle' | 'small';
+  htmlType?: ButtonHTMLType['type'];
+  type?: keyof ButtonThemeType;
+  size?: keyof ButtonSizeType;
   viewMode?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
   className = '',
   children,
-  disabled = false,
   fullSize = false,
   htmlType,
-  type = 'default',
-  size = 'large',
+  type = 'primary',
+  size = 'base',
   viewMode = false,
   ...props
 }) => {
   const base = 'rsup-btn';
   const cx = classNames(
     base,
-    { [`${base}--disabled`]: disabled },
-    { [`${base}--full-size`]: fullSize },
     `${base}--type-${type}`,
     `${base}--size-${size}`,
+    { [`${base}--full-size`]: fullSize },
+    { [`${base}--view-mode`]: viewMode },
   );
 
   return viewMode ? (
-    <button className={`${base}--view-mode`} {...props}>
+    <button className={`${base}__view-mode`} {...props}>
       {children}
     </button>
   ) : (
-    <button className={`${cx} ${className}`} disabled={disabled} type={htmlType} {...props}>
+    <button className={`${cx} ${className}`} type={htmlType} {...props}>
       {children}
     </button>
   );
