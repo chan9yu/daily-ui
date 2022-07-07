@@ -5,6 +5,8 @@ import { Button } from '@rsup/react-ui';
 import '@rsup/scss/build/global.css';
 
 const Container = styled.div`
+  $primary: red;
+
   width: 80%;
   height: 100vh;
   display: flex;

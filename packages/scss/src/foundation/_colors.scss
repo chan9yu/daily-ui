@@ -34,9 +34,9 @@ $text-gray-900: #0f1114 !default;
 /* --- Gray Colors End --- */
 
 /* --- Basic Colors --- */
-$blue: #83cdff !default;
-$green: #87ea30 !default;
-$red: #ff8f90 !default;
+$blue: #0984e3 !default;
+$green: #05c46b !default;
+$red: #ff3f34 !default;
 
 $basic-colors: (
   'blue': $blue,
@@ -73,6 +73,42 @@ $red-600: shade-color($red, 20%) !default;
 $red-700: shade-color($red, 40%) !default;
 $red-800: shade-color($red, 60%) !default;
 $red-900: shade-color($red, 80%) !default;
+
+$blues: (
+  100: $blue-100,
+  200: $blue-200,
+  300: $blue-300,
+  400: $blue-400,
+  500: $blue-500,
+  600: $blue-600,
+  700: $blue-700,
+  800: $blue-800,
+  900: $blue-900,
+) !default;
+
+$greens: (
+  100: $green-100,
+  200: $green-200,
+  300: $green-300,
+  400: $green-400,
+  500: $green-500,
+  600: $green-600,
+  700: $green-700,
+  800: $green-800,
+  900: $green-900,
+) !default;
+
+$reds: (
+  100: $red-100,
+  200: $red-200,
+  300: $red-300,
+  400: $red-400,
+  500: $red-500,
+  600: $red-600,
+  700: $red-700,
+  800: $red-800,
+  900: $red-900,
+) !default;
 /* --- Basic Colors End --- */
 
 /* --- Text Colors --- */
@@ -95,7 +131,7 @@ $text-colors: (
 // $success: var(--#{$prefix}success-color, $green) !default;
 // $error: var(--#{$prefix}error-color, $red-700) !default;
 
-$primary: var(--#{$prefix}primary-color, $blue-600) !default;
+$primary: #333 !default;
 $secondary: $warm-gray-600 !default;
 $success: $green !default;
 $error: $red-700 !default;
