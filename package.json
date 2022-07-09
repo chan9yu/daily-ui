@@ -1,5 +1,5 @@
 {
-  "name": "@rsup/core",
+  "name": "@rsup/design-system",
   "version": "1.0.0",
   "main": "index.js",
   "author": "changyuyeo <wry5533@gmail.com>",
@@ -9,7 +9,7 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "playground"
+      "playgrounds/*"
     ],
     "nohoist": [
       "**/styled-components",

@@ -1,4 +1,4 @@
-/* --- css 변수에 대한 prefix 지정 --- */
+/* ----- CSS Varibale Prefix ----- */
 $varibale-prefix: rsup- !default;
 $prefix: $varibale-prefix !default;
 
@@ -155,7 +155,7 @@ $lh-base: 1.5 !default;
 $lh-lg: 2 !default;
 /* ----- Typography End ----- */
 
-/* --- Breakpoints --- */
+/* ----- Breakpoints ----- */
 $breakpoints: (
   xs: 320px,
   sm: 480px,
@@ -164,4 +164,18 @@ $breakpoints: (
   xl: 1280px,
   xxl: 1440px,
 ) !default;
-/* --- Breakpoints End --- */
+/* ----- Breakpoints End ----- */
+
+/* ----- Spacing ----- */
+$spacing: (
+  xxxs: 4px,
+  xxs: 8px,
+  xs: 12px,
+  sm: 16px,
+  md: 24px,
+  lg: 32px,
+  xl: 48px,
+  xxl: 72px,
+  xxxl: 96px,
+) !default;
+/* ----- Spacing End ----- */

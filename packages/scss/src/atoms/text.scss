@@ -9,8 +9,6 @@
   font-size: var(--#{$prefix}-text-font-size);
   font-weight: var(--#{$prefix}-text-font-weight);
 
-  margin: 0;
-
   &--color-white {
     @include text-color($white);
   }

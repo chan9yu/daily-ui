@@ -9,8 +9,6 @@
   font-size: var(--#{$prefix}-title-font-size);
   font-weight: var(--#{$prefix}-title-font-weight);
 
-  margin: 0;
-
   &--color-white {
     @include title-color($white);
   }
