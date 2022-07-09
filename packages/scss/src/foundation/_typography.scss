@@ -1,50 +1,24 @@
-/* --- font family --- */
-$noto-sans: 'Noto Sans', sans-serif !default;
+/* --- Body Typography --- */
 $body-font-family: var(--#{$prefix}body-font-family, $noto-sans) !default;
-
-/* --- font sizes --- */
-$fs-base: 1rem !default; //* 16px
 $body-font-size: var(--#{$prefix}body-font-size, $fs-base) !default;
-$fs-xs: calc($fs-base * 0.75) !default; //* 12px
-$fs-sm: calc($fs-base * 0.875) !default; //* 14px
-$fs-lg: calc($fs-base * 1.125) !default; //* 18px
-$fs-xl: calc($fs-base * 1.25) !default; //* 20px
-
-$fs: (
-  'xs': $fs-xs,
-  'sm': $fs-sm,
-  'base': $body-font-size,
-  'lg': $fs-lg,
-  'xl': $fs-xl,
-) !default;
-
-/* --- title font sizes --- */
-$h1-fs: 2.5rem !default; //* 40px
-$h2-fs: 2rem !default; //* 32px
-$h3-fs: 1.75rem !default; //* 28px
-$h4-fs: 1.5rem !default; //* 24px
-$h5-fs: 1.25rem !default; //* 20px
-$h6-fs: 1rem !default; //* 16px
-
-$h-fs: (
-  '1': $h1-fs,
-  '2': $h2-fs,
-  '3': $h3-fs,
-  '4': $h4-fs,
-  '5': $h5-fs,
-  '6': $h6-fs,
-) !default;
-
-/* --- font weights --- */
-$fw-thin: 100 !default;
-$fw-light: 300 !default;
-$fw-regular: 400 !default;
-$fw-medium: 500 !default;
-$fw-bold: 700 !default;
 $body-font-weight: var(--#{$prefix}body-font-weight, $fw-regular) !default;
+$body-line-height: var(--#{$prefix}body-line-height, $lh-base) !default;
+/* --- Body Typography End --- */
 
-/* --- line-height --- */
-$lh-base: 1.5 !default;
-$lh-sm: 1.25 !default;
-$lh-lg: 2 !default;
-$body-line-height: $lh-base !default;
+/* --- Title font Size --- */
+$h-1-font-size: var(--#{$prefix}h-1-font-size, $h-1-fs) !default;
+$h-2-font-size: var(--#{$prefix}h-2-font-size, $h-2-fs) !default;
+$h-3-font-size: var(--#{$prefix}h-3-font-size, $h-3-fs) !default;
+$h-4-font-size: var(--#{$prefix}h-4-font-size, $h-4-fs) !default;
+$h-5-font-size: var(--#{$prefix}h-6-font-size, $h-5-fs) !default;
+$h-6-font-size: var(--#{$prefix}h-5-font-size, $h-6-fs) !default;
+
+$title-text-sizes: (
+  h-1: $h-1-font-size,
+  h-2: $h-2-font-size,
+  h-3: $h-3-font-size,
+  h-4: $h-4-font-size,
+  h-5: $h-5-font-size,
+  h-6: $h-6-font-size,
+) !default;
+/* --- Title font Size End --- */

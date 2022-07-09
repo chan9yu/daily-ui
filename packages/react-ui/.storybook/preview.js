@@ -1,9 +1,27 @@
+import React, { useMemo } from 'react';
+import { themes } from '@storybook/theming';
+
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  docs: { theme: themes.normal },
+  previewTabs: {
+    canvas: { hidden: true },
+    docs: { hidden: false },
   },
-}
+  viewMode: 'docs',
+};
+
+export const decorators = [
+  (Story) => {
+    const styled = useMemo(
+      () => ({ width: 'auto', display: 'flex', alignItems: 'center', gap: '15px' }),
+      [],
+    );
+
+    return (
+      <div style={styled}>
+        <Story />
+      </div>
+    );
+  },
+];

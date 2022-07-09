@@ -1,32 +1,167 @@
-/* --- Border --- */
-$border-widths: (
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px,
-) !default;
+/* --- css 변수에 대한 prefix 지정 --- */
+$varibale-prefix: rsup- !default;
+$prefix: $varibale-prefix !default;
 
-$border-width: map-get($border-widths, 1) !default;
-$border-style: solid !default;
-$border-color: $cool-gray-700 !default;
+/* ----- Colors ----- */
+/* --- Gray Colors --- */
+$white: #fff !default;
+$black: #000 !default;
 
-//* 4px | 6px | 8px | 16px | 32px | 50%
-$border-radius: (
-  sm: 0.25rem,
-  base: 0.375rem,
-  lg: 0.5rem,
-  xl: 1rem,
-  xxl: 2rem,
-  round: 50%,
-) !default;
+$cool-gray-100: #fafbfc !default;
+$cool-gray-200: #f7f8f9 !default;
+$cool-gray-300: #eff2f3 !default;
+$cool-gray-400: #e7ecee !default;
+$cool-gray-500: #d8dde1 !default;
+$cool-gray-600: #cbd1d6 !default;
+$cool-gray-700: #bec3c8 !default;
+$cool-gray-800: #a9adb0 !default;
+$cool-gray-900: #8e9091 !default;
+
+$warm-gray-100: #eee !default;
+$warm-gray-200: #ddd !default;
+$warm-gray-300: #d2d2d2 !default;
+$warm-gray-400: #acacac !default;
+$warm-gray-500: #999 !default;
+$warm-gray-600: #777 !default;
+$warm-gray-700: #666 !default;
+$warm-gray-800: #4b4b4b !default;
+$warm-gray-900: #333 !default;
+
+$text-gray-100: #fafbfc !default;
+$text-gray-200: #f7f8f9 !default;
+$text-gray-300: #eff2f3 !default;
+$text-gray-400: #dee0e1 !default;
+$text-gray-500: #b9bdc1 !default;
+$text-gray-600: #93999e !default;
+$text-gray-700: #64686c !default;
+$text-gray-800: #2c3137 !default;
+$text-gray-900: #0f1114 !default;
+/* --- Gray Colors End --- */
+
+/* --- Basic Colors --- */
+$red: #f31c1c !default;
+$orange: #ff8c00 !default;
+$yellow: #ffc107 !default;
+$green: #53ce11 !default;
+$blue: #29aaff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+
+$red-100: tint-color($red, 80%);
+$red-200: tint-color($red, 60%);
+$red-300: tint-color($red, 40%);
+$red-400: tint-color($red, 20%);
+$red-500: $red;
+$red-600: shade-color($red, 20%);
+$red-700: shade-color($red, 40%);
+$red-800: shade-color($red, 60%);
+$red-900: shade-color($red, 80%);
+
+$orange-100: tint-color($orange, 80%);
+$orange-200: tint-color($orange, 60%);
+$orange-300: tint-color($orange, 40%);
+$orange-400: tint-color($orange, 20%);
+$orange-500: $orange;
+$orange-600: shade-color($orange, 20%);
+$orange-700: shade-color($orange, 40%);
+$orange-800: shade-color($orange, 60%);
+$orange-900: shade-color($orange, 80%);
+
+$yellow-100: tint-color($yellow, 80%);
+$yellow-200: tint-color($yellow, 60%);
+$yellow-300: tint-color($yellow, 40%);
+$yellow-400: tint-color($yellow, 20%);
+$yellow-500: $yellow;
+$yellow-600: shade-color($yellow, 20%);
+$yellow-700: shade-color($yellow, 40%);
+$yellow-800: shade-color($yellow, 60%);
+$yellow-900: shade-color($yellow, 80%);
+
+$green-100: tint-color($green, 80%);
+$green-200: tint-color($green, 60%);
+$green-300: tint-color($green, 40%);
+$green-400: tint-color($green, 20%);
+$green-500: $green;
+$green-600: shade-color($green, 20%);
+$green-700: shade-color($green, 40%);
+$green-800: shade-color($green, 60%);
+$green-900: shade-color($green, 80%);
+
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
+
+$indigo-100: tint-color($indigo, 80%);
+$indigo-200: tint-color($indigo, 60%);
+$indigo-300: tint-color($indigo, 40%);
+$indigo-400: tint-color($indigo, 20%);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
+
+$purple-100: tint-color($purple, 80%);
+$purple-200: tint-color($purple, 60%);
+$purple-300: tint-color($purple, 40%);
+$purple-400: tint-color($purple, 20%);
+$purple-500: $purple;
+$purple-600: shade-color($purple, 20%);
+$purple-700: shade-color($purple, 40%);
+$purple-800: shade-color($purple, 60%);
+$purple-900: shade-color($purple, 80%);
+/* --- Basic Colors End --- */
+/* ----- Colors End ----- */
+
+/* ----- Typography ----- */
+$noto-sans: 'Noto Sans', sans-serif !default;
+$font-size: 1rem !default;
+
+$fs-xs: calc(#{$font-size} * 0.75); //* 12px
+$fs-sm: calc(#{$font-size} * 0.875); //* 14px
+$fs-base: $font-size; //* 16px
+$fs-lg: calc(#{$font-size} * 1.125); //* 18px
+$fs-xl: calc(#{$font-size} * 1.25); //* 20px
+
+$h-1-fs: calc(#{$font-size} * 2.5); //* 40px
+$h-2-fs: calc(#{$font-size} * 2); //* 32px
+$h-3-fs: calc(#{$font-size} * 1.75); //* 28px
+$h-4-fs: calc(#{$font-size} * 1.5); //* 24px
+$h-5-fs: calc(#{$font-size} * 1.25); //* 20px
+$h-6-fs: $font-size; //* 16px
+
+$fw-thin: 100;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$font-weights: (
+  thin: $fw-thin,
+  light: $fw-light,
+  regular: $fw-regular,
+  medium: $fw-medium,
+  bold: $fw-bold,
+);
+
+$lh-sm: 1.25 !default;
+$lh-base: 1.5 !default;
+$lh-lg: 2 !default;
+/* ----- Typography End ----- */
 
 /* --- Breakpoints --- */
 $breakpoints: (
-  xs: 0,
-  sm: 576px,
+  xs: 320px,
+  sm: 480px,
   md: 768px,
   lg: 1024px,
   xl: 1280px,
   xxl: 1440px,
 ) !default;
+/* --- Breakpoints End --- */

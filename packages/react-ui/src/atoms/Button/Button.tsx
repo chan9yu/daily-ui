@@ -1,30 +1,13 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import classNames from 'classnames';
-
-type ColorThemeType = {
-  primary: 'primary';
-  secondary: 'secondary';
-  success: 'success';
-  error: 'error';
-};
-
-type SizeType = {
-  xs: 'xs';
-  sm: 'sm';
-  base: 'base';
-  lg: 'lg';
-  xl: 'xl';
-  xxl: 'xxl';
-};
+import { ColorThemeType, SizeType } from '../../typings/props.types';
 
 type ButtonThemeType = {
   default: 'default';
   gray: 'gray';
   text: 'text';
 } & ColorThemeType;
-
 type ButtonSizeType = Pick<SizeType, 'sm' | 'base' | 'lg'>;
-
 type ButtonHTMLType = ButtonHTMLAttributes<HTMLButtonElement>;
 
 interface ButtonProps extends Omit<ButtonHTMLType, 'type'> {

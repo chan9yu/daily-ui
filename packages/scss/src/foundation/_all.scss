@@ -1,9 +1,5 @@
-/* --- 최상단 변수에 대한 prefix 지정 --- */
-$varibale-prefix: rsup- !default;
-$prefix: $varibale-prefix !default;
-
 @import './functions';
+@import './variables';
 @import './colors';
 @import './typography';
-@import './variables';
 @import './components';

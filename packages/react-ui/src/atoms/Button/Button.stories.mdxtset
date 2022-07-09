@@ -35,10 +35,18 @@ export const Template = (args) => <Button {...args}>{args.children || 'Noraml'}<
 
 <Canvas>
   <Story name="disabled">
-    <Button type="primary" disabled>Dimmed</Button>
-    <Button type="default" disabled>Dimmed</Button>
-    <Button type="dashed" disabled>Dimmed</Button>
-    <Button type="text" disabled>Dimmed</Button>
+    <Button type="primary" disabled>
+      Dimmed
+    </Button>
+    <Button type="default" disabled>
+      Dimmed
+    </Button>
+    <Button type="dashed" disabled>
+      Dimmed
+    </Button>
+    <Button type="text" disabled>
+      Dimmed
+    </Button>
   </Story>
 </Canvas>
 
@@ -52,22 +60,33 @@ export const Template = (args) => <Button {...args}>{args.children || 'Noraml'}<
 <Canvas>
   <Story name="size">
     <Flex gap=""></Flex>
-    <Row><Col></Col></Row>
-    <Button type="primary" size="large">Normal</Button>
-    <Button type="primary" size="middle">Normal</Button>
-    <Button type="primary" size="small">Normal</Button>
+    <Row>
+      <Col></Col>
+    </Row>
+    <Button type="primary" size="large">
+      Normal
+    </Button>
+    <Button type="primary" size="middle">
+      Normal
+    </Button>
+    <Button type="primary" size="small">
+      Normal
+    </Button>
   </Story>
 </Canvas>
 
 <br />
 
 ## 풀사이즈
+
 - 너비 100%를 갖는 버튼을 만들 수 있습니다.
 - fullSize가 true 일 때,
 
 <Canvas>
   <Story name="fullSize">
-    <Button fullSize type="primary">FullSize</Button>
+    <Button fullSize type="primary">
+      FullSize
+    </Button>
   </Story>
 </Canvas>
 
@@ -110,7 +129,7 @@ export const Template = (args) => <Button {...args}>{args.children || 'Noraml'}<
         },
       },
       children: {
-        description: '버튼 콘텐츠 (텍스트, 아이콘 등)',
+        description: 'title content',
         control: 'text',
       },
     }}

@@ -1,21 +1,22 @@
 :root {
-  @each $color, $value in $basic-colors {
-    --#{$prefix}#{$color}-color: #{$value};
+  @each $key, $value in $body-colors {
+    --#{$prefix}body-#{$key}: #{$value};
   }
 
-  @each $color, $value in $text-colors {
-    --#{$prefix}#{$color}-color: #{$value};
+  @each $key, $value in $text-colors {
+    --#{$prefix}#{$key}-color: #{$value};
   }
 
-  @each $color, $value in $theme-colors {
-    --#{$prefix}#{$color}-color: #{$value};
+  @each $key, $value in $theme-colors {
+    --#{$prefix}#{$key}-color: #{$value};
   }
-
-  --#{$prefix}body-bg-color: #{$body-bg-color};
-  --#{$prefix}body-color: #{$body-text-color};
 
   --#{$prefix}body-font-family: #{$body-font-family};
   --#{$prefix}body-font-size: #{$body-font-size};
   --#{$prefix}body-font-weight: #{$body-font-weight};
   --#{$prefix}body-line-height: #{$body-line-height};
+
+  @each $key, $value in $title-text-sizes {
+    --#{$prefix}#{$key}-font-size: #{$value};
+  }
 }

@@ -4,7 +4,7 @@ const sass = require('node-sass');
 
 //* build 폴더 생성
 try {
-  console.log('💾 build 폴더 생성...');
+  console.log('💾 build 폴더 생성합니다...');
   fs.mkdirSync(path.join(__dirname, '..', 'build'));
 } catch {
   console.log('build 폴더가 존재합니다...');
@@ -21,5 +21,5 @@ const compile = (filePath, fileName) => {
   fs.writeFileSync(path.resolve(fileName), result.css.toString());
 };
 
-//* scss 컴파일
+//* scss build
 compile('src/global.scss', 'build/global.css');
