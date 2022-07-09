@@ -3,8 +3,8 @@
 @import 'base/all';
 
 body {
-  color: var(--#{$prefix}body-text-color);
   background-color: var(--#{$prefix}body-bg-color);
+  color: var(--#{$prefix}body-text-color);
 
   font-family: var(--#{$prefix}body-font-family);
   font-size: var(--#{$prefix}body-font-size);
@@ -14,4 +14,5 @@ body {
 
 //* Components
 @import 'atoms/button';
+@import 'atoms/text';
 @import 'atoms/title';

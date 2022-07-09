@@ -2,14 +2,14 @@
 @import '../mixins/title';
 
 .#{$prefix}title {
-  --#{$prefix}-title-font-color: var(--#{$prefix}-title-font-color, #{$title-color});
+  --#{$prefix}-title-font-color: var(--#{$prefix}-title-font-color);
   --#{$prefix}-title-font-size: var(--#{$prefix}-title-font-size);
   --#{$prefix}-title-font-weight: var(--#{$prefix}-title-font-weight);
-
-  margin: 0;
   color: var(--#{$prefix}-title-font-color);
   font-size: var(--#{$prefix}-title-font-size);
   font-weight: var(--#{$prefix}-title-font-weight);
+
+  margin: 0;
 
   &--color-white {
     @include title-color($white);
@@ -28,7 +28,7 @@
   }
 }
 
-@each $size, $value in $title-text-sizes {
+@each $size, $value in $title-font-sizes {
   .#{$prefix}title--size-#{$size} {
     @include title-size($value);
   }

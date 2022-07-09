@@ -5,7 +5,23 @@ $body-font-weight: var(--#{$prefix}body-font-weight, $fw-regular) !default;
 $body-line-height: var(--#{$prefix}body-line-height, $lh-base) !default;
 /* --- Body Typography End --- */
 
-/* --- Title font Size --- */
+/* --- Text Component Typography --- */
+$font-size-xs: var(--#{$prefix}font-size-xs, $fs-xs) !default;
+$font-size-sm: var(--#{$prefix}font-size-sm, $fs-sm) !default;
+$font-size-base: var(--#{$prefix}font-size-base, $fs-base) !default;
+$font-size-lg: var(--#{$prefix}font-size-lg, $fs-lg) !default;
+$font-size-xl: var(--#{$prefix}font-size-xl, $fs-xl) !default;
+
+$font-sizes: (
+  xs: $font-size-xs,
+  sm: $font-size-sm,
+  base: $font-size-base,
+  lg: $font-size-lg,
+  xl: $font-size-xl,
+) !default;
+/* --- Text Component Typography End --- */
+
+/* --- Title Component Typography --- */
 $h-1-font-size: var(--#{$prefix}h-1-font-size, $h-1-fs) !default;
 $h-2-font-size: var(--#{$prefix}h-2-font-size, $h-2-fs) !default;
 $h-3-font-size: var(--#{$prefix}h-3-font-size, $h-3-fs) !default;
@@ -13,7 +29,7 @@ $h-4-font-size: var(--#{$prefix}h-4-font-size, $h-4-fs) !default;
 $h-5-font-size: var(--#{$prefix}h-6-font-size, $h-5-fs) !default;
 $h-6-font-size: var(--#{$prefix}h-5-font-size, $h-6-fs) !default;
 
-$title-text-sizes: (
+$title-font-sizes: (
   h-1: $h-1-font-size,
   h-2: $h-2-font-size,
   h-3: $h-3-font-size,

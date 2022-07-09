@@ -2615,7 +2615,7 @@
     lodash "^4.17.21"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-docs@6.5.9":
+"@storybook/addon-docs@6.5.9", "@storybook/addon-docs@^6.5.9":
   version "6.5.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-6.5.9.tgz#32b27fb298624afd738c1371a764d7ff4831fe6d"
   integrity sha512-9lwOZyiOJFUgGd9ADVfcgpels5o0XOXqGMeVLuzT1160nopbZjNjo/3+YLJ0pyHRPpMJ4rmq2+vxRQR6PVRgPg==
@@ -10797,11 +10797,6 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
-
-normalize-scss@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.npmjs.org/normalize-scss/-/normalize-scss-7.0.1.tgz"
-  integrity sha512-qj16bWnYs+9/ac29IgGjySg4R5qQTp1lXfm7ApFOZNVBYFY8RZ3f8+XQNDDLHeDtI3Ba7Jj4+LuPgz9v/fne2A==
 
 normalize-url@^3.0.0:
   version "3.3.0"

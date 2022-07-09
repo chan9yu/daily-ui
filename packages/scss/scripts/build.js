@@ -14,6 +14,7 @@ try {
 const compile = (filePath, fileName) => {
   const result = sass.renderSync({
     data: fs.readFileSync(path.resolve(filePath)).toString(),
+    sourceComments: false,
     outputStyle: 'expanded',
     includePaths: [path.resolve('src')],
   });

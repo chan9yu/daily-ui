@@ -9,14 +9,14 @@ $body-colors: (
 /* --- Body colors End --- */
 
 /* --- Text Colors --- */
-$title-color: var(--#{$prefix}title-color, $text-gray-800) !default;
-$description-color: var(--#{$prefix}description-color, $text-gray-700) !default;
+$text-color: var(--#{$prefix}text-color, $text-gray-800) !default;
+$description-text-color: var(--#{$prefix}description-text-color, $text-gray-700) !default;
 $input-text-color: var(--#{$prefix}input-text-color, $text-gray-900) !default;
 $guide-text-color: var(--#{$prefix}guide-text, $text-gray-600) !default;
 
 $text-colors: (
-  title: $title-color,
-  description: $description-color,
+  default: $text-color,
+  description: $description-text-color,
   input: $input-text-color,
   guide: $guide-text-color,
 ) !default;
