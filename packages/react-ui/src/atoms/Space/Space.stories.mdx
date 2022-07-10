@@ -1,0 +1,143 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Space from './Space'
+import Text from '../Text'
+import '@rsup/scss/build/global.css'
+
+<Meta title="atoms/Space" component={Space} />
+
+export const Template = args => (
+	<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+		<Space {...args}>{args.children || <Text>Space Test!</Text>}</Space>
+	</div>
+)
+
+# Space
+
+&lt;Space /&gt; 컴포넌트 사용법 정리
+- Space는 구성요소 간격(여백)을 설정할 때 유용합니다.
+- Space 컴포넌트에 해당 구성요소를 children로 넘겨 사용합니다.
+
+<br />
+
+## side
+
+- Space의 적용할 방향을 side 속성으로 지정할 수 있습니다.
+- default 값은 all (모든 방향 적용) 입니다.
+- side: `all` | `top` | `right` | `bottom` | `left` | `x` | `y`
+	- top: 해당 구성요소에 위 (padding 혹은 margin) 여백을 설정
+	- right: 해당 구성요소에 오른쪽 (padding 혹은 margin) 여백을 설정
+	- bottom: 해당 구성요소에 아래 (padding 혹은 margin) 여백을 설정
+	- left: 해당 구성요소에 왼쪽 (padding 혹은 margin) 여백을 설정
+	- x: 해당 구성요소에 위 (padding 혹은 margin) 여백을 설정
+	- y: 해당 구성요소에 위 (padding 혹은 margin) 여백을 설정
+
+<Canvas>
+	<Story name="Side">
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space side="top"><Text>space-top</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space side="right"><Text>space-right</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space side="bottom"><Text>space-bottom</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space side="left"><Text>space-left</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space side="x"><Text>space-x</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space side="y"><Text>space-y</Text></Space>
+		</div>
+	</Story>
+</Canvas>
+
+<br />
+
+## space
+
+- Space의 (여백) 값을 space 속성으로 지정할 수 있습니다.
+- default 값은 xs (12px) 입니다.
+- space: `xxxs` | `xxs` | `xs` | `sm` | `lg` | `xl` | `xxl` | `xxxl`
+	- xxxs: 4px
+	- xxs: 8px
+	- xs: 12px
+	- sm: 16px
+	- md: 24px
+	- lg: 32px
+	- xl: 48px
+	- xxl: 72px
+	- xxxl: 96px
+
+<Canvas>
+	<Story name="Space">
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space space="xxxs"><Text>space-xxxs</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space space="xxs"><Text>space-xxs</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space space="xs"><Text>space-xs</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space space="sm"><Text>space-sm</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space space="lg"><Text>space-lg</Text></Space>
+		</div>
+	</Story>
+</Canvas>
+
+<br />
+
+## type
+
+- Space의 여백방식을 type 속성으로 지정할 수 있습니다.
+- default 값은 padding 입니다.
+- type: `padding` | `margin`
+
+<Canvas>
+	<Story name="Type">
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space type="padding"><Text>space-padding</Text></Space>
+		</div>
+		<div style={{ width: 'auto', border: '1px solid #cdcdcd' }}>
+			<Space type="margin"><Text>space-margin</Text></Space>
+		</div>
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			style: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: 'ReactNode',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

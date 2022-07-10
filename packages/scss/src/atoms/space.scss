@@ -1,0 +1,42 @@
+@import 'foundation/all';
+
+$sides: left, right, top, bottom;
+$directions: x, y;
+
+@each $space, $value in $spacing {
+  .#{$prefix}space__margin--#{$space} {
+    margin: $value;
+  }
+
+  .#{$prefix}space__padding--#{$space} {
+    padding: $value;
+  }
+
+  @each $side in $sides {
+    .#{$prefix}space__margin--#{$side}-#{$space} {
+      margin-#{$side}: $value;
+    }
+
+    .#{$prefix}space__padding--#{$side}-#{$space} {
+      padding-#{$side}: $value;
+    }
+  }
+
+  @each $direction in $directions {
+    .#{$prefix}space__margin--#{$direction}-#{$space} {
+      @if $direction == x {
+        margin: 0 $value;
+      } @else if $direction == y {
+        margin: $value 0;
+      }
+    }
+
+    .#{$prefix}space__padding--#{$direction}-#{$space} {
+      @if $direction == x {
+        padding: 0 $value;
+      } @else if $direction == y {
+        padding: $value 0;
+      }
+    }
+  }
+}

@@ -5,14 +5,18 @@ export type ColorThemeType = {
   error: 'error';
 };
 
-export type SizeType = {
+export type SpaceType = {
+  xxxs: 'xxxs';
+  xxs: 'xxs';
   xs: 'xs';
   sm: 'sm';
-  base: 'base';
   lg: 'lg';
   xl: 'xl';
   xxl: 'xxl';
+  xxxl: 'xxxl';
 };
+
+export type SizeType = { base: 'base' } & Omit<SpaceType, 'xxxs' | 'xxs' | 'xxl' | 'xxxl'>;
 
 export type WeightType = {
   thin: 'thin';

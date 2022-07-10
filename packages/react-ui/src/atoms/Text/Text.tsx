@@ -14,7 +14,7 @@ interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode;
   className?: string;
   type?: keyof TextColorType;
-  size?: keyof Omit<SizeType, 'xxl'>;
+  size?: keyof SizeType;
   style?: CSSProperties;
   weight?: keyof WeightType;
 }
