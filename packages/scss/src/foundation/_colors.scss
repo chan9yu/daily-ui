@@ -1,6 +1,6 @@
 /* --- Body colors --- */
 $body-bg-color: var(--#{$prefix}body-bg-color, $white) !default;
-$body-font-color: var(--#{$prefix}body-text-color, $text-gray-800) !default;
+$body-font-color: var(--#{$prefix}body-font-color, $text-gray-800) !default;
 
 $body-colors: (
   bg-color: $body-bg-color,
@@ -12,10 +12,10 @@ $body-colors: (
 $text-color: var(--#{$prefix}text-color, $text-gray-800) !default;
 $description-text-color: var(--#{$prefix}description-text-color, $text-gray-700) !default;
 $input-text-color: var(--#{$prefix}input-text-color, $text-gray-900) !default;
-$guide-text-color: var(--#{$prefix}guide-text, $text-gray-600) !default;
+$guide-text-color: var(--#{$prefix}guide-text-color, $text-gray-600) !default;
 
 $text-colors: (
-  default: $text-color,
+  text: $text-color,
   description: $description-text-color,
   input: $input-text-color,
   guide: $guide-text-color,

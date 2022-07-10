@@ -31,8 +31,7 @@
     "prepare": "husky install",
     "dev": "yarn lerna run dev",
     "build": "yarn lerna run build",
-    "clean:logs": "bash ./scripts/clean-error-log.sh",
-    "clean:modules": "bash ./scripts/clean-node-modules.sh"
+    "clean": "bash ./scripts/clean-modules.sh"
   },
   "dependencies": {},
   "devDependencies": {

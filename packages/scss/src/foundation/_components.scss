@@ -1,28 +1,25 @@
-/* --- Border Variables --- */
-$border-widths: (
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px,
-) !default;
-
-$border-width: map-get($border-widths, 1) !default;
-$border-style: solid !default;
-$border-color: $cool-gray-700 !default;
-
-//* 4px | 6px | 8px | 16px | 32px | 50%
-$border-radius: (
-  sm: 0.25rem,
-  base: 0.375rem,
-  lg: 0.5rem,
-  xl: 1rem,
-  xxl: 2rem,
-  round: 50%,
-) !default;
-/* --- Border Variables End --- */
-
 /* --- Button Variables --- */
-$btn-text-color: var(--#{$prefix}btn-text-color, $white) !default;
-$btn-bg-color: var(--#{$prefix}btn-bg-color, $primary) !default;
+$btn-text-color: $white !default;
+$btn-bg-color: $primary !default;
 /* --- Button Variables End --- */
+
+/* --- Select Variables --- */
+$select-font-size: $fs-sm !default;
+$select-label-color: $text-gray-600 !default;
+$select-bg-color: transparent !default;
+$select-bg-color-active: $text-gray-300 !default;
+$select-overlay-bg-color: $white !default;
+
+$select-option-text-color: $text-color !default;
+$select-option-bg-color: $white !default;
+$select-option-bg-color-hover: $text-gray-400 !default;
+$select-option-bg-color-active: $text-gray-300 !default;
+
+$select-box-shadow: $box-shadow !default;
+$select-transition: $transition-base !default;
+
+$select-border-width: $border-width !default;
+$select-border-style: $border-style !default;
+$select-border-color: $warm-gray-300 !default;
+$select-border-radius: $border-radius !default;
+/* --- Select Variables End --- */

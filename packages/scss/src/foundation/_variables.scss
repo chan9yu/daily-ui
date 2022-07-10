@@ -179,3 +179,34 @@ $spacing: (
   xxxl: 96px,
 ) !default;
 /* ----- Spacing End ----- */
+
+/* --- Border Variables --- */
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+$border-radius-list: (
+  sm: 4px,
+  base: 6px,
+  lg: 8px,
+  xl: 16px,
+  xxl: 32px,
+  round: 50%,
+) !default;
+
+$border-width: map-get($border-widths, 1) !default;
+$border-style: solid !default;
+$border-color: $cool-gray-700 !default;
+$border-radius: map-get($border-radius-list, 'sm') !default;
+/* --- Border Variables End --- */
+
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;

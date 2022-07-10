@@ -31,43 +31,53 @@
 /* --- media-query mixin End --- */
 
 /* --- margin & padding mixin --- */
-@mixin padding($space) {
-  padding: map-get($spacing, $space);
+@mixin padding($space, $type: all) {
+  @if $type == 'all' {
+    padding: map-get($spacing, $space);
+  } @else if $type == 'x' {
+    padding: 0 map-get($spacing, $space);
+  } @else if $type == 'y' {
+    padding: map-get($spacing, $space) 0;
+  } @else if $type == 'top' {
+    padding-top: map-get($spacing, $space);
+  } @else if $type == 'right' {
+    padding-right: map-get($spacing, $space);
+  } @else if $type == 'bottom' {
+    padding-bottom: map-get($spacing, $space);
+  } @else if $type == 'left' {
+    padding-left: map-get($spacing, $space);
+  }
 }
 
-@mixin padding-top($space) {
-  padding-top: map-get($spacing, $space);
+@mixin padding-2($space-y, $space-x) {
+  padding: map-get($spacing, $space-y) map-get($spacing, $space-x);
 }
 
-@mixin padding-right($space) {
-  padding-right: map-get($spacing, $space);
+@mixin margin($space, $type: all) {
+  @if $type == 'all' {
+    margin: map-get($spacing, $space);
+  } @else if $type == 'x' {
+    margin: 0 map-get($spacing, $space);
+  } @else if $type == 'y' {
+    margin: map-get($spacing, $space) 0;
+  } @else if $type == 'top' {
+    margin-top: map-get($spacing, $space);
+  } @else if $type == 'right' {
+    margin-right: map-get($spacing, $space);
+  } @else if $type == 'bottom' {
+    margin-bottom: map-get($spacing, $space);
+  } @else if $type == 'left' {
+    margin-left: map-get($spacing, $space);
+  }
 }
 
-@mixin padding-bottom($space) {
-  padding-bottom: map-get($spacing, $space);
-}
-
-@mixin padding-left($space) {
-  padding-left: map-get($spacing, $space);
-}
-
-@mixin margin($space) {
-  margin: map-get($spacing, $space);
-}
-
-@mixin margin-top($space) {
-  margin-top: map-get($spacing, $space);
-}
-
-@mixin margin-right($space) {
-  margin-right: map-get($spacing, $space);
-}
-
-@mixin margin-bottom($space) {
-  margin-bottom: map-get($spacing, $space);
-}
-
-@mixin margin-left($space) {
-  margin-left: map-get($spacing, $space);
+@mixin margin-2($space-y, $space-x) {
+  margin: map-get($spacing, $space-y) map-get($spacing, $space-x);
 }
 /* --- margin & padding mixin End --- */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -4,7 +4,11 @@
   }
 
   @each $key, $value in $text-colors {
-    --#{$prefix}#{$key}-color: #{$value};
+    @if $key == text {
+      --#{$prefix}#{$key}-color: #{$value};
+    } @else {
+      --#{$prefix}#{$key}-color-text: #{$value};
+    }
   }
 
   @each $key, $value in $theme-colors {

@@ -1,24 +1,28 @@
-import React from 'react';
 import styled from 'styled-components';
+import { Select } from '@rsup/react-ui';
+import { useState } from 'react';
 
-import { Space, Text, Title } from '@rsup/react-ui';
-import '@rsup/scss/build/global.css';
+const options = ['jebong', 'changyu', 'hosu'];
 
 const Container = styled.div`
   width: 80%;
   height: 100vh;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const App = () => (
-  <Container>
-    <Space type="margin" side="x">
-      <Title>Title</Title>
-    </Space>
-    <Space type="padding" side="y">
-      <Text type="primary">Text</Text>
-    </Space>
-  </Container>
-);
+const App = () => {
+  const [Selected, setSelected] = useState('');
+
+  const handleSelect = (e) => setSelected(e.target.value);
+
+  return (
+    <Container>
+      <Select options={options} />
+    </Container>
+  );
+};
 
 export default App;
