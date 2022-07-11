@@ -1,26 +1,39 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Select } from '@rsup/react-ui';
-import { useState } from 'react';
 
-const options = ['jebong', 'changyu', 'hosu'];
+const options = [
+  {
+    value: '1',
+    label: 'jebong',
+  },
+  {
+    value: '2',
+    label: 'hosu',
+  },
+  {
+    value: '3',
+    label: 'changyu',
+  },
+];
 
 const Container = styled.div`
   width: 80%;
   height: 100vh;
   margin: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 `;
 
 const App = () => {
-  const [Selected, setSelected] = useState('');
+  const [selected, setSelected] = useState('');
 
-  const handleSelect = (e) => setSelected(e.target.value);
+  const onChangeSelected = (value: string) => setSelected(value);
 
   return (
     <Container>
-      <Select options={options} />
+      <Select options={options} onChange={onChangeSelected} />
     </Container>
   );
 };

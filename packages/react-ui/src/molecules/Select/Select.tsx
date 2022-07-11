@@ -1,29 +1,38 @@
-import React, { CSSProperties, FC, useEffect, useMemo, useRef, useState } from 'react';
+import React, { CSSProperties, FC, ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import cx from 'classnames';
 import { ArrowDown, Check } from '@rsup/react-icon';
 import Text from '../../atoms/Text';
 
+interface SelectOption {
+  label: string;
+  value: string;
+}
+
 interface SelectProps {
-  onOptionSelected?: (option: string, index: number) => void;
-  options?: string[];
+  onChange?: (value: string) => void;
+  options?: SelectOption[];
   placeholder?: string;
+  prefix?: ReactNode;
 }
 
 const Select: FC<SelectProps> = ({
-  onOptionSelected: onSelected,
+  onChange,
   options = [],
   placeholder = '선택해주세요.',
+  prefix,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [overlayTop, setOverlayTop] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const labelRef = useRef<HTMLDivElement>(null);
 
-  const onOptionSelected = (option: string, index: number) => () => {
-    onSelected && onSelected(option, index);
-    setSelectedIndex(index);
-    setIsOpen(false);
-  };
+  const onOptionSelected =
+    ({ value }: SelectOption, index: number) =>
+    () => {
+      onChange && onChange(value);
+      setSelectedIndex(index);
+      setIsOpen(false);
+    };
 
   const onToggleIsOpen = () => setIsOpen((prev) => !prev);
 
@@ -41,33 +50,40 @@ const Select: FC<SelectProps> = ({
         className={`${base}__label ${cx({ [`${base}__label--active`]: isOpen })}`}
         onClick={onToggleIsOpen}
       >
+        {prefix && <div className={`${base}__prefix`}>{prefix}</div>}
         {selectedIndex === null ? (
           <Text size="sm" type="guide" weight="light">
             {placeholder}
           </Text>
         ) : (
-          <Text>{options[selectedIndex]}</Text>
+          <Text>{options[selectedIndex].label}</Text>
         )}
         <ArrowDown />
       </div>
 
       {isOpen && (
-        <ul className={`${base}__overlay`} style={overlayStyled}>
-          {options.map((option, index) => {
-            const isSelected = selectedIndex === index;
+        <>
+          {
+            <ul className={`${base}__overlay`} style={overlayStyled}>
+              {options.map((option, index) => {
+                const isSelected = selectedIndex === index;
 
-            return (
-              <li
-                key={index}
-                className={`${base}__option ${cx({ [`${base}__option--selected`]: isSelected })}`}
-                onClick={onOptionSelected(option, index)}
-              >
-                <Text>{option}</Text>
-                {isSelected && <Check width={16} height={16} />}
-              </li>
-            );
-          })}
-        </ul>
+                return (
+                  <li
+                    key={index}
+                    className={`${base}__option ${cx({
+                      [`${base}__option--selected`]: isSelected,
+                    })}`}
+                    onClick={onOptionSelected(option, index)}
+                  >
+                    <Text>{option.label}</Text>
+                    {isSelected && <Check width={16} height={16} />}
+                  </li>
+                );
+              })}
+            </ul>
+          }
+        </>
       )}
     </div>
   );

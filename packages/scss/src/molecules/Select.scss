@@ -12,25 +12,25 @@
   --#{$prefix}select-border-style: #{$select-border-style};
   --#{$prefix}select-border-color: #{$select-border-color};
   --#{$prefix}select-border-radius: #{$select-border-radius};
-
-  width: 100%;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
   font-size: var(--#{$prefix}select-font-size);
+  justify-content: center;
+  position: relative;
+
+  width: 100%;
 
   &__label {
     @include padding-2('xxxs', 'xs');
-    display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--#{$prefix}select-bg-color);
-    transition: var(--#{$prefix}select-transition);
     border: var(--#{$prefix}select-border-width) var(--#{$prefix}select-border-style)
       var(--#{$prefix}select-border-color);
     border-radius: var(--#{$prefix}select-border-radius);
+    display: flex;
+    justify-content: space-between;
+    transition: var(--#{$prefix}select-transition);
 
     > svg {
       transition: var(--#{$prefix}select-transition);
@@ -39,21 +39,21 @@
     &--active {
       --#{$prefix}select-border-color: #{$select-bg-color};
       --#{$prefix}select-bg-color: #{$select-bg-color-active};
+    }
 
-      > svg {
-        transform: rotate(180deg);
-      }
+    &--active > svg {
+      transform: rotate(180deg);
     }
   }
 
   &__overlay {
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-    color: var(--#{$prefix}select-text-color);
     background-color: var(--#{$prefix}select-overlay-bg-color);
     border-radius: var(--#{$prefix}select-border-radius);
     box-shadow: var(--#{$prefix}select-box-shadow);
+    color: var(--#{$prefix}select-text-color);
+    position: absolute;
+    width: 100%;
+    z-index: 99;
   }
 
   &__option {
@@ -61,15 +61,15 @@
     --#{$prefix}select-option-bg-color: #{$select-option-bg-color};
 
     @include padding('xs');
-    color: var(--#{$prefix}select-option-text-color);
+    align-items: center;
     background-color: var(--#{$prefix}select-option-bg-color);
+    box-sizing: border-box;
+    color: var(--#{$prefix}select-option-text-color);
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-    align-items: center;
-    width: 100%;
     transition: var(--#{$prefix}select-transition);
-    cursor: pointer;
+    width: 100%;
 
     &--selected {
       --#{$prefix}select-option-bg-color: #{$select-option-bg-color-active};
