@@ -46,6 +46,12 @@
     }
   }
 
+  &__label-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+  }
+
   &__overlay {
     background-color: var(--#{$prefix}select-overlay-bg-color);
     border-radius: var(--#{$prefix}select-border-radius);
@@ -75,7 +81,7 @@
       --#{$prefix}select-option-bg-color: #{$select-option-bg-color-active};
     }
 
-    &:hover {
+    &--highlighted {
       --#{$prefix}select-option-bg-color: #{$select-option-bg-color-hover};
     }
   }

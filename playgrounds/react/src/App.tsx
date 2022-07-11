@@ -33,7 +33,9 @@ const App = () => {
 
   return (
     <Container>
-      <Select options={options} onChange={onChangeSelected} />
+      <Select prefix={<span>test</span>} options={options} onChange={onChangeSelected} />
+      <Select prefix={<span>test</span>} options={options} onChange={onChangeSelected} />
+      {selected}
     </Container>
   );
 };
