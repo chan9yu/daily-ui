@@ -111,7 +111,12 @@ const Select: FC<SelectProps> = ({
             highlightOption(getMoveOptionIndex(highlighIndex, options, 'next'));
           break;
         case 'selected':
-          if (highlighIndex) onOptionSelected(options[highlighIndex], highlighIndex);
+          if (currentKey === isMatchKey) {
+            if (highlighIndex) {
+              console.log('selected');
+              onOptionSelected(options[highlighIndex], highlighIndex);
+            }
+          }
           break;
         default:
           break;
@@ -168,12 +173,9 @@ const Select: FC<SelectProps> = ({
   }, [options, options.length]);
 
   useEffect(() => {
-    console.log(highlighIndex);
     if (highlighIndex && isOpen) {
       const ref = optionRefs[highlighIndex];
-      if (ref && ref.current) {
-        ref.current.focus();
-      }
+      if (ref && ref.current) ref.current.focus();
     }
   }, [highlighIndex, isOpen, optionRefs]);
 
