@@ -64,6 +64,7 @@ const Select: FC<SelectProps> = ({
         if (onChange) onChange(value);
         setSelectedIndex(index);
         setIsOpen(false);
+        labelRef.current?.focus();
       },
     [onChange],
   );
@@ -93,14 +94,14 @@ const Select: FC<SelectProps> = ({
     (
       currentKey: string | number,
       isMatchKey: string | number,
-      type: 'exit' | 'movePrev' | 'moveNext' | 'selected',
+      type: 'open' | 'exit' | 'movePrev' | 'moveNext' | 'selected',
     ) => {
       switch (type) {
+        case 'open':
+          if (currentKey === isMatchKey) onToggleIsOpen();
+          break;
         case 'exit':
-          if (currentKey === isMatchKey) {
-            setIsOpen(false);
-            return;
-          }
+          if (currentKey === isMatchKey) setIsOpen(false);
           break;
         case 'movePrev':
           if (currentKey === isMatchKey)
@@ -112,10 +113,7 @@ const Select: FC<SelectProps> = ({
           break;
         case 'selected':
           if (currentKey === isMatchKey) {
-            if (highlighIndex) {
-              console.log('selected');
-              onOptionSelected(options[highlighIndex], highlighIndex);
-            }
+            if (highlighIndex !== null) onOptionSelected(options[highlighIndex], highlighIndex)();
           }
           break;
         default:
@@ -128,21 +126,17 @@ const Select: FC<SelectProps> = ({
   const onLabelKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     e.preventDefault();
 
-    const keyIncludedToOpen = (keys: string[] | number[], key: string | number) => {
-      if (typeof key === 'string') {
-        if ((keys as string[]).includes(key)) onToggleIsOpen();
-      } else {
-        if ((keys as number[]).includes(key)) onToggleIsOpen();
-      }
-    };
-
     //* e.keyCode deprecated 대체코드
     //* key propetry를 지원하지 않은 브라우저인 경우 e.keyCode 사용
     const currentKey = e.key || e.keyCode;
     if (typeof currentKey === 'string') {
-      keyIncludedToOpen([KEYS.ARROW_DOWN, KEYS.ENTER, KEYS.SPACE], currentKey);
+      [KEYS.ARROW_DOWN, KEYS.ENTER, KEYS.SPACE].forEach((openKey) =>
+        keyMatchingEvent(currentKey, openKey, 'open'),
+      );
     } else {
-      keyIncludedToOpen([KEY_CODES.ARROW_DOWN, KEY_CODES.ENTER, KEY_CODES.SPACE], currentKey);
+      [KEY_CODES.ARROW_DOWN, KEY_CODES.ENTER, KEY_CODES.SPACE].forEach((openKey) =>
+        keyMatchingEvent(currentKey, openKey, 'open'),
+      );
     }
   };
 
@@ -173,11 +167,13 @@ const Select: FC<SelectProps> = ({
   }, [options, options.length]);
 
   useEffect(() => {
-    if (highlighIndex && isOpen) {
+    //* overlay가 렌더링이 되면, 해당 li 포커스
+    if (highlighIndex !== null && isOpen) {
       const ref = optionRefs[highlighIndex];
       if (ref && ref.current) ref.current.focus();
     }
-  }, [highlighIndex, isOpen, optionRefs]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, highlighIndex]);
 
   const overlayStyled: CSSProperties = useMemo(() => ({ top: overlayTop }), [overlayTop]);
 
@@ -220,6 +216,8 @@ const Select: FC<SelectProps> = ({
                 ref={ref}
                 role="option"
                 aria-selected={isSelected}
+                aria-checked={isSelected}
+                aria-label={option.label}
                 tabIndex={isHighlighted ? -1 : 0}
                 className={`${BASE}__option ${cx({
                   [`${BASE}__option--selected`]: isSelected,
