@@ -12,7 +12,7 @@ export default [
     },
     plugins: [typescript()],
     preserveModules: true,
-    external: ['react', 'classnames'],
+    external: ['react', 'classnames', '@rsup/react-icon'],
   },
   // d.ts (타입 정의 파일) 번들링
   {

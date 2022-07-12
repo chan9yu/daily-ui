@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import { Select } from '@rsup/react-ui';
 import { Check } from '@rsup/react-icon';
 
+// option
+// {
+//   prefix: <PrefixIcon />,
+//   value: 'value',
+//   label: 'test',
+//   disabled: false
+// }
 const options = [
   {
     value: '1',
