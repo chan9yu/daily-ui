@@ -13,28 +13,40 @@
     ],
     "nohoist": [
       "**/styled-components",
-      "**/stylelint-config-sass-guidelines"
+      "**/eslint-plugin-react"
     ]
   },
   "lint-staged": {
     "**/*.scss": [
-      "yarn lint:fix"
+      "yarn lint:scss-fix"
     ],
     "**/*.{ts,tsx}": [
+      "eslint --fix",
       "prettier --write",
       "git add ."
     ]
   },
   "scripts": {
-    "lint": "stylelint '**/*.scss'",
-    "lint:fix": "yarn lint --fix",
+    "lint": "yarn lerna run lint",
+    "lint:fix": "yarn lerna lint:fix",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:scss-fix": "yarn lint:scss --fix",
     "prepare": "husky install",
     "dev": "yarn lerna run dev",
     "build": "yarn lerna run build",
     "clean": "bash ./scripts/clean-modules.sh"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
     "lerna": "^5.0.0",
     "lint-staged": "^13.0.0",

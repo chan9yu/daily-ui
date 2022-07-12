@@ -1,19 +1,28 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Select } from '@rsup/react-ui';
+import { Check } from '@rsup/react-icon';
 
 const options = [
   {
     value: '1',
-    label: 'jebong',
+    label: '하나',
   },
   {
     value: '2',
-    label: 'hosu',
+    label: '둘',
   },
   {
-    value: '3',
-    label: 'changyu',
+    value: '21',
+    label: '둘',
+  },
+  {
+    value: '22',
+    label: '둘',
+  },
+  {
+    value: '23',
+    label: '둘',
   },
 ];
 
@@ -33,9 +42,9 @@ const App = () => {
 
   return (
     <Container>
-      <Select prefix={<span>test</span>} options={options} onChange={onChangeSelected} />
-      <Select prefix={<span>test</span>} options={options} onChange={onChangeSelected} />
-      {selected}
+      selected: {selected || '0'}
+      <br />
+      <Select options={options} onChange={onChangeSelected} />
     </Container>
   );
 };

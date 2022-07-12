@@ -1,18 +1,31 @@
 ## design_system
 
 design_system
+
 <br />
 
-## Todo List
+## 명령어 모음
 
-- [x] scss 변수 초기화 후 다시 설정
-- [x] module.scss 형식으로 변경
-- [ ] rollup.config 수정
-- [ ] button theme 설정
-- [ ] button style 완성
-- [ ] icon 패키지 생성
-- [ ] text, title, drop down
-- [ ] card
-- [ ] 디바이드 추가
-- [ ] input, list item, list
-- [ ] useModal hook, modal component
+### lerna bootstrap
+
+- 모든 package에서 node_module을 설치(심볼릭 링크 연결)
+- 최적화를 통해 중복된 모듈을 정리
+
+### lerna version
+
+- 마지막 커밋과 차이가 있는 패키지를 파악하여 버전 변경
+- 심볼릭 링크가 걸려있는 dependancy 버전까지 적용
+
+### lerna publish
+
+- 패키지를 NPM Repository에 배포
+
+### lerna clean
+
+- Root를 제외한 package에서 node_module을 제거
+- 클린빌드의 목적으로 사용
+
+### lerna run
+
+- 각 패키지의 package.json안에 명시되어있는 script 실행
+- \- parallel 옵션으로 병렬로 script 실행 가능
