@@ -2,10 +2,12 @@
   "name": "@rsup/scss",
   "description": "rsupport design-system scss package",
   "author": "changyu <wry5533@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "engines": {
     "node": ">=16"
   },

@@ -2,10 +2,12 @@
   "name": "@rsup/react-icon",
   "description": "rsupport design-system react-icon package",
   "author": "changyu <wry5533@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "build/index.js",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "engines": {
     "node": ">=16"
   },
