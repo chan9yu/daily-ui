@@ -12,10 +12,8 @@
     "node": ">=16"
   },
   "keywords": [
-    "mqtt",
-    "publish/subscribe",
-    "publish",
-    "subscribe"
+    "react",
+    "icon"
   ],
   "scripts": {
     "dev": "yarn build --watch",

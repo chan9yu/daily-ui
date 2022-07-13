@@ -11,6 +11,10 @@
   "engines": {
     "node": ">=16"
   },
+  "keywords": [
+    "scss",
+    "design-system"
+  ],
   "scripts": {
     "build": "node ./scripts/build.js",
     "dev": "npx nodemon --watch src --exec yarn build -e scss"

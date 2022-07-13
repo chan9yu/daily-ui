@@ -11,6 +11,10 @@
   "engines": {
     "node": ">=16"
   },
+  "keywords": [
+    "react",
+    "design-system"
+  ],
   "scripts": {
     "dev": "yarn build --watch",
     "build": "rollup -c",
