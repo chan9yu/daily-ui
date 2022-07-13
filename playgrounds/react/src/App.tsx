@@ -1,59 +1,31 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Select } from '@rsup/react-ui';
-import { Check } from '@rsup/react-icon';
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Select, Text } from '@rsup/react-ui';
 
-// option
-// {
-//   prefix: <PrefixIcon />,
-//   value: 'value',
-//   label: 'test',
-//   disabled: false
-// }
-const options = [
-  {
-    value: '1',
-    label: '하나',
-  },
-  {
-    value: '2',
-    label: '둘',
-  },
-  {
-    value: '21',
-    label: '둘',
-  },
-  {
-    value: '22',
-    label: '둘',
-  },
-  {
-    value: '23',
-    label: '둘',
-  },
-];
-
-const Container = styled.div`
-  width: 80%;
-  height: 100vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --rsup-primary-color: #16a085;
+  }
 `;
 
-const App = () => {
-  const [selected, setSelected] = useState('');
+export default () => (
+  <Container>
+    <GlobalStyle />
+    <Text type="primary">primary color text</Text>
+    <Select
+      options={[
+        { label: 'test', value: '1' },
+        { label: 'test2', value: '2' },
+        { label: 'test3', value: '3' },
+      ]}
+    />
+  </Container>
+);
 
-  const onChangeSelected = (value: string) => setSelected(value);
-
-  return (
-    <Container>
-      selected: {selected || '0'}
-      <br />
-      <Select options={options} onChange={onChangeSelected} />
-    </Container>
-  );
-};
-
-export default App;
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
