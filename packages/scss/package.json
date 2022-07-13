@@ -1,14 +1,17 @@
 {
   "name": "@rsup/scss",
+  "description": "rsupport design-system scss package",
+  "author": "changyu",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "files": ["build"],
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build": "node ./scripts/build.js",
     "dev": "npx nodemon --watch src --exec yarn build -e scss"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",

@@ -1,16 +1,25 @@
 {
   "name": "@rsup/react-icon",
+  "description": "rsupport design-system react-icon package",
+  "author": "changyu",
   "version": "0.1.0",
   "main": "build/index.js",
   "license": "MIT",
+  "files": ["build"],
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "mqtt",
+    "publish/subscribe",
+    "publish",
+    "subscribe"
+  ],
   "scripts": {
     "dev": "yarn build --watch",
     "build": "rollup -c",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -1,8 +1,14 @@
 {
   "name": "@rsup/react-ui",
+  "description": "rsupport design-system react-ui package",
+  "author": "changyu",
   "version": "0.1.0",
   "main": "build/index.js",
   "license": "MIT",
+  "files": ["build"],
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "dev": "yarn build --watch",
     "build": "rollup -c",
@@ -10,9 +16,6 @@
     "build-storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "classnames": "^2.3.1",
