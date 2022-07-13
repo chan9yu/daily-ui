@@ -34,6 +34,7 @@
     "prepare": "husky install",
     "dev": "yarn lerna run dev",
     "build": "yarn lerna run build",
+    "build:sb": "yarn lerna run build-storybook",
     "clean": "bash ./scripts/clean-modules.sh",
     "publish": "bash ./scripts/publish.sh"
   },
