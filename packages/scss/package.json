@@ -2,7 +2,7 @@
   "name": "@rsup/scss",
   "description": "rsupport design-system scss package",
   "author": "changyu <wry5533@gmail.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "files": [

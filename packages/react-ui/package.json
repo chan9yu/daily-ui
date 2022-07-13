@@ -2,7 +2,7 @@
   "name": "@rsup/react-ui",
   "description": "rsupport design-system react-ui package",
   "author": "changyu <wry5533@gmail.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "build/index.js",
   "license": "MIT",
   "files": [
