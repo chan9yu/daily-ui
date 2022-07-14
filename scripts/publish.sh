@@ -1,4 +1,6 @@
-echo -e "\033[33m"npm publish start ⏳"\033[m"
+#!/bin/sh
+
+echo -e "\033[33m" --- npm publish ---"\033[m"
 source .env
-yarn lerna publish --registry $BASE_REGISTRY_URI
-echo -e "\033[33m"npm publish env ⏳"\033[m"
+
+yarn lerna publish --registry $BASE_REGISTRY_URIscripts/clean-modules.sh

@@ -1,0 +1,167 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Button from './Button';
+import '@rsup/scss/build/global.css'
+
+<Meta title="atoms/Button" component={Button} />
+
+export const Template = (args) => <Button {...args}>{args.children || 'Noraml'}</Button>;
+
+# Button
+
+&lt;Button /&gt; 컴포넌트 사용법 정리
+
+<br />
+
+## type (color)
+
+- button의 color를 **type** 속성으로 지정할 수 있습니다.
+- default 값은 primary (#29aaff) 입니다.
+- type: `primary` | `secondary` | `success` | `error` | `gray` | `white` 
+
+<Canvas>
+  <Story name="Type">
+    <Button type="primary">Normal</Button>
+    <Button type="secondary">Normal</Button>
+    <Button type="success">Normal</Button>
+    <Button type="error">Normal</Button>
+    <Button type="gray">Normal</Button>
+    <Button type="white">Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## outline
+
+- button을 형태를 변경할 수 있습니다.
+- default 값은 false 입니다.
+- outline: boolean
+
+<Canvas>
+  <Story name="Outline">
+    <Button outline type="primary">Normal</Button>
+    <Button outline type="secondary">Normal</Button>
+    <Button outline type="success">Normal</Button>
+    <Button outline type="error">Normal</Button>
+    <Button outline type="gray">Normal</Button>
+    <Button outline type="white">Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## size
+
+- button의 크기를 **size** 속성으로 지정할 수 있습니다.
+- default 값은 base 입니다.
+- size: `sm` | `base` | `lg` 
+
+<Canvas>
+  <Story name="Size">
+    <Button size="sm">Normal</Button>
+    <Button size="base">Normal</Button>
+    <Button size="lg">Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## radius
+
+- button의 테두리 둥글기를 radius 속성으로 지정할 수 있습니다.
+- default 값은 sm 입니다.
+- size: `sm` | `base` | `lg` | `xl` | `xxl`
+	- sm: 4px
+	- base: 6px
+	- lg: 8px
+	- xl: 16px
+	- xxl: 32px
+
+<Canvas>
+  <Story name="Radius">
+    <Button radius="sm">Normal</Button>
+    <Button radius="base">Normal</Button>
+    <Button radius="lg">Normal</Button>
+    <Button radius="xl">Normal</Button>
+    <Button radius="xxl">Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## animation
+
+- button의 animation을 설정할 수 있습니다.
+- default 값은 false 입니다.
+- animation: boolean
+
+<Canvas>
+  <Story name="Animation">
+    <Button animation>Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## disabled
+
+- button의 disabled을 설정할 수 있습니다.
+- default 값은 false 입니다.
+- disabled: boolean
+
+<Canvas>
+  <Story name="Disabled">
+    <Button disabled>Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## fullSize
+
+- button의 너비를 부모크기 100%로 지정할 수 있습니다
+- default 값은 false 입니다.
+- fullSize: boolean
+
+<Canvas>
+  <Story name="FullSize">
+    <Button fullSize>Normal</Button>
+  </Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+  <Story
+    name="Playground"
+    argTypes={{
+      className: {
+        table: {
+          disable: true,
+        },
+      },
+      htmlType: {
+        table: {
+          disable: true,
+        },
+      },
+      style: {
+        table: {
+          disable: true,
+        },
+      },
+      children: {
+        description: 'button content',
+        control: 'text',
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

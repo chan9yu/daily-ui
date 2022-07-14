@@ -1,6 +1,65 @@
 /* --- Button Variables --- */
-$btn-text-color: $white !default;
-$btn-bg-color: $primary !default;
+$btn-font-sizes: (
+  'sm': $font-size-sm,
+  'base': $font-size-sm,
+  'lg': $font-size-base,
+) !default;
+
+$btn-paddings-x: (
+  'sm': map-get($spacing, xxs),
+  'base': map-get($spacing, xs),
+  'lg': map-get($spacing, sm),
+) !default;
+
+$btn-paddings-y: (
+  'sm': map-get($spacing, xxxs),
+  'base': map-get($spacing, xxs),
+  'lg': map-get($spacing, xs),
+) !default;
+
+$btn-border-width: $border-width !default;
+$btn-border-style: $border-style !default;
+$btn-border-radius-sizes: (
+  sm: map-get($border-radius-list, sm),
+  base: map-get($border-radius-list, base),
+  lg: map-get($border-radius-list, lg),
+  xl: map-get($border-radius-list, xl),
+  xxl: map-get($border-radius-list, xxl),
+) !default;
+
+$btn-font-size: (
+  'sm': $font-size-sm,
+  'base': $font-size-sm,
+  'lg': $font-size-base,
+) !default;
+
+$btn-colors: (
+  'primary': $white,
+  'secondary': $white,
+  'success': $white,
+  'error': $white,
+  'gray': $white,
+  'white': $text-color,
+) !default;
+
+$btn-bg-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'error': $error,
+  'gray': $cool-gray-800,
+  'white': $white,
+) !default;
+$btn-bg-white: $white !default;
+
+$btn-font-family: $noto-sans !default;
+$btn-font-weight: $fw-regular !default;
+$btn-line-height: $lh-base !default;
+
+$btn-box-shadow: $box-shadow !default;
+
+$btn-disabled-opacity: $disabled-opacity !default;
+$btn-transition: $transition-base !default;
 /* --- Button Variables End --- */
 
 /* --- Select Variables --- */

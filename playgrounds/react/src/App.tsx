@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Select, Text } from '@rsup/react-ui';
+import { Button, Text } from '@rsup/react-ui';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -11,21 +11,27 @@ const GlobalStyle = createGlobalStyle`
 export default () => (
   <Container>
     <GlobalStyle />
-    <Text type="primary">primary color text</Text>
-    <Select
-      options={[
-        { label: 'test', value: '1' },
-        { label: 'test2', value: '2' },
-        { label: 'test3', value: '3' },
-      ]}
-    />
+    <br />
+    <Button size="sm" animation>
+      Normal
+    </Button>
+    <br />
+    <Button size="base" type="success" outline>
+      Normal
+    </Button>
+    <br />
+    <Button size="lg" type="error" outline>
+      Normal
+    </Button>
+    <br />
+    <Button size="lg" disabled type="secondary" fullSize animation radius="round">
+      Normal
+    </Button>
   </Container>
 );
 
 const Container = styled.div`
-  width: 100%;
+  width: 80%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 `;

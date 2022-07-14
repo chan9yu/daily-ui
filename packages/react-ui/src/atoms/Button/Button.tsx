@@ -1,50 +1,63 @@
-import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, CSSProperties, FC, ReactNode } from 'react';
 import classNames from 'classnames';
 import { ColorThemeType, SizeType } from '../../typings/props.types';
 
 type ButtonThemeType = {
-  default: 'default';
   gray: 'gray';
-  text: 'text';
+  white: 'white';
 } & ColorThemeType;
 type ButtonSizeType = Pick<SizeType, 'sm' | 'base' | 'lg'>;
+type ButtonRadiusType = { xxl: 'xxl' } & Omit<SizeType, 'xs'>;
 type ButtonHTMLType = ButtonHTMLAttributes<HTMLButtonElement>;
 
 interface ButtonProps extends Omit<ButtonHTMLType, 'type'> {
-  className?: string;
+  animation?: boolean;
   children: ReactNode;
+  className?: string;
+  disabled?: boolean;
   fullSize?: boolean;
   htmlType?: ButtonHTMLType['type'];
-  type?: keyof ButtonThemeType;
+  radius?: keyof ButtonRadiusType;
+  outline?: boolean;
   size?: keyof ButtonSizeType;
-  viewMode?: boolean;
+  style?: CSSProperties;
+  type?: keyof ButtonThemeType;
 }
 
+const BASE = 'rsup-btn' as const;
+
 const Button: FC<ButtonProps> = ({
-  className = '',
+  animation = false,
   children,
+  className = '',
+  disabled = false,
   fullSize = false,
   htmlType,
-  type = 'primary',
+  radius = 'sm',
+  outline = false,
   size = 'base',
-  viewMode = false,
+  style,
+  type = 'primary',
   ...props
 }) => {
-  const base = 'rsup-btn';
   const cx = classNames(
-    base,
-    `${base}--type-${type}`,
-    `${base}--size-${size}`,
-    { [`${base}--full-size`]: fullSize },
-    { [`${base}--view-mode`]: viewMode },
+    BASE,
+    `${BASE}--border-radius-${radius}`,
+    `${BASE}--size-${size}`,
+    `${BASE}--type-${type}-${outline && type !== 'white' ? 'outline' : 'fill'}`,
+    { [`${BASE}--animation`]: animation },
+    { [`${BASE}--disabled`]: disabled },
+    { [`${BASE}--full-size`]: fullSize },
   );
 
-  return viewMode ? (
-    <button className={`${base}__view-mode`} {...props}>
-      {children}
-    </button>
-  ) : (
-    <button className={`${cx} ${className}`} type={htmlType} {...props}>
+  return (
+    <button
+      className={`${cx} ${className}`}
+      disabled={disabled}
+      type={htmlType}
+      style={style}
+      {...props}
+    >
       {children}
     </button>
   );

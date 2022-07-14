@@ -29,3 +29,11 @@ design_system
 
 - 각 패키지의 package.json안에 명시되어있는 script 실행
 - \- parallel 옵션으로 병렬로 script 실행 가능
+
+<br />
+
+## env
+
+```
+BASE_REGISTRY_URI=...
+```
