@@ -66,7 +66,6 @@ $btn-transition: $transition-base !default;
 $select-font-size: $fs-sm !default;
 $select-label-color: $text-gray-600 !default;
 $select-bg-color: transparent !default;
-$select-bg-color-active: $text-gray-300 !default;
 $select-overlay-bg-color: $white !default;
 
 $select-option-text-color: $text-color !default;
@@ -79,6 +78,7 @@ $select-transition: $transition-base !default;
 
 $select-border-width: $border-width !default;
 $select-border-style: $border-style !default;
-$select-border-color: $warm-gray-300 !default;
 $select-border-radius: $border-radius !default;
+$select-border-color: $warm-gray-300 !default;
+$select-border-color-active: $primary !default;
 /* --- Select Variables End --- */

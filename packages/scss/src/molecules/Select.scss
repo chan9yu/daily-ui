@@ -12,13 +12,13 @@
   --#{$prefix}select-border-style: #{$select-border-style};
   --#{$prefix}select-border-color: #{$select-border-color};
   --#{$prefix}select-border-radius: #{$select-border-radius};
+
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
   font-size: var(--#{$prefix}select-font-size);
+  flex-direction: column;
+  display: flex;
   justify-content: center;
   position: relative;
-
   width: 100%;
 
   &__label {
@@ -36,9 +36,9 @@
       transition: var(--#{$prefix}select-transition);
     }
 
+    &:hover,
     &--active {
-      --#{$prefix}select-border-color: #{$select-bg-color};
-      --#{$prefix}select-bg-color: #{$select-bg-color-active};
+      --#{$prefix}select-border-color: #{$select-border-color-active};
     }
 
     &--active > svg {

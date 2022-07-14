@@ -1,6 +1,29 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Button, Text } from '@rsup/react-ui';
+import { Button, Select, Text } from '@rsup/react-ui';
+
+const options = [
+  {
+    value: '1',
+    label: '하나',
+  },
+  {
+    value: '2',
+    label: '둘',
+  },
+  {
+    value: '21',
+    label: '둘',
+  },
+  {
+    value: '22',
+    label: '둘',
+  },
+  {
+    value: '23',
+    label: '둘',
+  },
+];
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -12,21 +35,7 @@ export default () => (
   <Container>
     <GlobalStyle />
     <br />
-    <Button size="sm" animation>
-      Normal
-    </Button>
-    <br />
-    <Button size="base" type="success" outline>
-      Normal
-    </Button>
-    <br />
-    <Button size="lg" type="error" outline>
-      Normal
-    </Button>
-    <br />
-    <Button size="lg" disabled type="secondary" fullSize animation radius="round">
-      Normal
-    </Button>
+    <Select options={options} />
   </Container>
 );
 
