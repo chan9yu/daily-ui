@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import { ArrowDown, Check, Close, Icon, Lock, Normal } from '@rsup/react-icon';
+
+<Meta title="atoms/Icon" component={ArrowDown} />
+
+export const Template = (args) => <Button {...args}>{args.children || 'Noraml'}</Button>;
+
+## Icons
+
+<Canvas>
+  <Story name="Icons">
+    <ArrowDown />
+    <Check />
+    <Close />
+    <Icon />
+    <Lock />
+    <Normal />
+  </Story>
+</Canvas>
