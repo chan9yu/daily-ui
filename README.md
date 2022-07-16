@@ -35,5 +35,6 @@ design_system
 ## env
 
 ```
+npm publish registry
 BASE_REGISTRY_URI=...
 ```
