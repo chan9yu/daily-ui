@@ -1,0 +1,58 @@
+$prefix: --daily;
+
+/* ===== COLORS ===== */
+$green: #5ece7b;
+$green-light: #9ee2b0;
+
+$dark: #1d1f22;
+$drak-light: #737680;
+
+$gray: #a3a5ad;
+$gray-light: #bebfc4;
+
+$white: #ffffff;
+$white-daek: #f1f2f3;
+
+$red: #d12727;
+$red-light: #f8dedf;
+
+$blue: #0468db;
+$blue-light: #b4d2f4;
+/* ===== END OF COLORS ===== */
+
+/* ===== TYPOGRAPHY ===== */
+$playfair: Playfair, serif;
+$raleway: Raleway, Arial, sans-serif;
+
+$fs-xs: 0.75rem; //12px
+$fs-sm: 0.875rem; //14px
+$fs-md: 1rem; //16px
+$fs-lg: 1.125rem; //18px
+$fs-xl: 1.5rem; //24px
+
+$fs-h-1: 1.375rem; //22px
+$fs-h-2: 1.375rem; //22px
+$fs-h-3: 1rem; //16px
+$fs-h-4: 1.125rem; //18px
+$fs-h-5: 0.75rem; //24px
+$fs-h-6: 0.75rem; //24px
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+/* ===== END OF TYPOGRAPHY ===== */
+
+/* ===== BREAKPOINTS ===== */
+$breakpoints: (
+  // 768px
+  md: 48rem,
+  // 1024px
+  lg: 64rem,
+  // 1280px
+  xl: 80rem
+);
+/* ===== END OF BREAKPOINTS ===== */

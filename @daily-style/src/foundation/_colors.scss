@@ -1,0 +1,14 @@
+// https://webruden.tistory.com/336 scss 변수 js 변환 참고
+
+$body-text-color: var(#{$prefix}-text-color, $dark) !default;
+$body-bg-color: var(#{$prefix}-text-color, $white) !default;
+
+$btn-primary-color: var(#{$prefix}-primary-color, $white) !default;
+$btn-primary-bg: var(#{$prefix}-primary-bg, $green) !default;
+$btn-primary-bg-hover: var(#{$prefix}-primary-bg-hover, $green-light) !default;
+
+$form-color: var(#{$prefix}-form-color, $dark) !default;
+$form-bg: var(#{$prefix}-form-bg, $white) !default;
+$form-error-color: var(#{$prefix}-form-error-color, $red) !default;
+$form-error-border: var(#{$prefix}-form-error-border, $red) !default;
+$form-focus-color: var(#{$prefix}-form-focus-color, $green) !default;
