@@ -3,8 +3,15 @@
 	"description": "daily design-system styles package",
 	"author": "chan9yu <wry5533@gmail.com>",
 	"version": "0.0.1",
-	"main": "index.js",
+	"repository": "https://github.com/chan9yu/daily-design-system",
 	"license": "MIT",
+	"keywords": [
+		"design system",
+		"scss",
+		"style",
+		"ui",
+		"library"
+	],
 	"scripts": {
 		"dev": "npx nodemon --watch src --exec yarn build -e scss",
 		"build": "node ./scripts/build.js"

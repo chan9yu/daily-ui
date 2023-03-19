@@ -1,0 +1,15 @@
+{
+	"name": "@daily/react-icons",
+	"description": "daily design-system react-icons package",
+	"author": "chan9yu <wry5533@gmail.com>",
+	"version": "0.0.1",
+	"repository": "https://github.com/chan9yu/daily-design-system",
+	"license": "MIT",
+	"keywords": [
+		"design system",
+		"react",
+		"components",
+		"icon",
+		"library"
+	]
+}

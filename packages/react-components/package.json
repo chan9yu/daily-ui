@@ -1,0 +1,15 @@
+{
+	"name": "@daily/react-components",
+	"description": "daily design-system react-components package",
+	"author": "chan9yu <wry5533@gmail.com>",
+	"version": "0.0.1",
+	"repository": "https://github.com/chan9yu/daily-design-system",
+	"license": "MIT",
+	"keywords": [
+		"design system",
+		"react",
+		"components",
+		"ui",
+		"library"
+	]
+}
