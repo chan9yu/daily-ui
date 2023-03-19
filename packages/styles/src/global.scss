@@ -1,3 +1,6 @@
 //* Configuration
-@import url('foundation/all');
-@import url('base/all');
+@import 'foundation/all';
+@import 'base/all';
+
+//* Component Styles
+@import 'styles/button';
