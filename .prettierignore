@@ -1,1 +1,14 @@
 **/node_modules
+**/coverage
+**/build
+**/dist
+
+*.log
+*.lock
+*.swp
+*.DS_Store
+
+.husky/*
+
+.eslintignore
+.prettierignore
