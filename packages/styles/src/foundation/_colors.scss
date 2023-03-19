@@ -19,7 +19,7 @@ $blue: #0468db;
 $blue-light: #b4d2f4;
 
 $body-text-color: var(#{$prefix}-text-color, $dark) !default;
-$body-bg-color: var(#{$prefix}-text-color, $white) !default;
+$body-bg-color: var(#{$prefix}-bg-color, $white) !default;
 
 $btn-primary-color: var(#{$prefix}-primary-color, $white) !default;
 $btn-primary-bg: var(#{$prefix}-primary-bg, $green) !default;
