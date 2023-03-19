@@ -1,0 +1,17 @@
+{
+	"name": "@daily/styles",
+	"description": "daily design-system styles package",
+	"author": "chan9yu <wry5533@gmail.com>",
+	"version": "0.0.1",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"dev": "npx nodemon --watch src --exec yarn build -e scss",
+		"build": "node ./scripts/build.js"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.14",
+		"node-sass": "^8.0.0",
+		"postcss": "^8.4.21"
+	}
+}
