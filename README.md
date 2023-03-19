@@ -21,3 +21,19 @@ daily design system
 - [ ] motion
 - [ ] spacing
 - [ ] typography
+
+<br />
+
+### setting
+
+node -v
+
+```
+v18.12.1
+```
+
+etc...
+
+```
+chmod +x .husky/...
+```
