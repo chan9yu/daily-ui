@@ -1,5 +1,23 @@
 // https://webruden.tistory.com/336 scss 변수 js 변환 참고
 
+$green: #5ece7b;
+$green-light: #9ee2b0;
+
+$dark: #1d1f22;
+$drak-light: #737680;
+
+$gray: #a3a5ad;
+$gray-light: #bebfc4;
+
+$white: #ffffff;
+$white-daek: #f1f2f3;
+
+$red: #d12727;
+$red-light: #f8dedf;
+
+$blue: #0468db;
+$blue-light: #b4d2f4;
+
 $body-text-color: var(#{$prefix}-text-color, $dark) !default;
 $body-bg-color: var(#{$prefix}-text-color, $white) !default;
 
