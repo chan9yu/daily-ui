@@ -9,6 +9,7 @@
 *.DS_Store
 
 .husky/*
+scripts/*
 
 .eslintignore
 .prettierignore
