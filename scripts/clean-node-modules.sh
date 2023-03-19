@@ -13,6 +13,9 @@ for dir in */; do
   fi
 done
 
+# 루트 디렉토리로 이동
+cd ..
+
 # 루트 디렉토리에서 node_modules 삭제
 echo -e "\033[33m" root node_modules 삭제 "\033[m"
 rm -rf node_modules
