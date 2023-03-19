@@ -6,10 +6,10 @@ daily design system
 
 ### 패키지 목록
 
-- react-components: react ui 컴포넌트 패키지
-- react-icons: react icon 컴포넌트 패키지
-- styles: 공통 스타일 패키지
-- vue-components: vue ui 컴포넌트 패키지
+- [react-components](https://github.com/chan9yu/daily-design-system/tree/master/packages/react-components): react ui 컴포넌트 패키지
+- [react-icons](https://github.com/chan9yu/daily-design-system/tree/master/packages/react-icons): react icon 컴포넌트 패키지
+- [styles](https://github.com/chan9yu/daily-design-system/tree/master/packages/styles): 공통 스타일 패키지
+- [vue-components](https://github.com/chan9yu/daily-design-system/tree/master/packages/vue-components): vue ui 컴포넌트 패키지
 
 <br />
 
