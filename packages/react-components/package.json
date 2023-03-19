@@ -11,5 +11,10 @@
 		"components",
 		"ui",
 		"library"
-	]
+	],
+	"devDependencies": {
+		"@types/react": "^18.0.28",
+		"react": "^18.2.0",
+		"typescript": "^5.0.2"
+	}
 }
