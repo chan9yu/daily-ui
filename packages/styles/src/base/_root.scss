@@ -1,34 +1,28 @@
 :root {
-  #{$prefix}-body-text-color: #{$dark};
-  #{$prefix}-body-bg-color: #{$white};
-
-  #{$prefix}-btn-primary-color: #{$white};
-  #{$prefix}-btn-primary-bg: #{$green};
-  #{$prefix}-btn-primary-bg-hover: #{$green-light};
-
-  #{$prefix}-btn-secondary-color: #{$white};
-  #{$prefix}-btn-secondary-bg: #{$dark};
-
-  #{$prefix}-form-color: #{$dark};
-  #{$prefix}-form-bg: #{$white};
-  #{$prefix}-form-error-color: #{$red};
-  #{$prefix}-form-error-border: #{$red};
-  #{$prefix}-form-border-focus-color: #{$green};
-
-  #{$prefix}-body-font-size: #{$fs-base};
-  #{$prefix}-body-font-weight: #{$fw-normal};
-
-  #{$prefix}-h1-font-size: #{$h-1};
-  #{$prefix}-h2-font-size: #{$h-2};
-  #{$prefix}-h3-font-size: #{$h-3};
-  #{$prefix}-h4-font-size: #{$h-4};
-  #{$prefix}-h5-font-size: #{$h-5};
-  #{$prefix}-h6-font-size: #{$h-6};
-
-  #{$prefix}-h1-font-weight: #{$fw-medium};
-  #{$prefix}-h2-font-weight: #{$fw-medium};
-  #{$prefix}-h3-font-weight: #{$fw-medium};
-  #{$prefix}-h4-font-weight: #{$fw-normal};
-  #{$prefix}-h5-font-weight: #{$fw-normal};
-  #{$prefix}-h6-font-weight: #{$fw-light};
+	#{$prefix}-body-text-color: #{$dark};
+	#{$prefix}-body-bg-color: #{$white};
+	#{$prefix}-btn-primary-color: #{$white};
+	#{$prefix}-btn-primary-bg: #{$green};
+	#{$prefix}-btn-primary-bg-hover: #{$green-light};
+	#{$prefix}-btn-secondary-color: #{$white};
+	#{$prefix}-btn-secondary-bg: #{$dark};
+	#{$prefix}-form-color: #{$dark};
+	#{$prefix}-form-bg: #{$white};
+	#{$prefix}-form-error-color: #{$red};
+	#{$prefix}-form-error-border: #{$red};
+	#{$prefix}-form-border-focus-color: #{$green};
+	#{$prefix}-body-font-size: #{$fs-base};
+	#{$prefix}-body-font-weight: #{$fw-normal};
+	#{$prefix}-h1-font-size: #{$h-1};
+	#{$prefix}-h2-font-size: #{$h-2};
+	#{$prefix}-h3-font-size: #{$h-3};
+	#{$prefix}-h4-font-size: #{$h-4};
+	#{$prefix}-h5-font-size: #{$h-5};
+	#{$prefix}-h6-font-size: #{$h-6};
+	#{$prefix}-h1-font-weight: #{$fw-medium};
+	#{$prefix}-h2-font-weight: #{$fw-medium};
+	#{$prefix}-h3-font-weight: #{$fw-medium};
+	#{$prefix}-h4-font-weight: #{$fw-normal};
+	#{$prefix}-h5-font-weight: #{$fw-normal};
+	#{$prefix}-h6-font-weight: #{$fw-light};
 }
