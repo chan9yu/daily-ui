@@ -5,6 +5,11 @@
 	"repository": "https://github.com/chan9yu/daily-design-system",
 	"author": "chan9yu <wry5533@gmail.com>",
 	"license": "MIT",
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
 	"lint-staged": {
 		"**/*.scss": [
 			"yarn stylelint:fix"
@@ -14,6 +19,7 @@
 		]
 	},
 	"scripts": {
+		"build": "yarn lerna run build",
 		"stylelint": "stylelint '**/*.scss'",
 		"stylelint:fix": "yarn stylelint --fix",
 		"prepare": "husky install",
@@ -22,6 +28,7 @@
 	},
 	"devDependencies": {
 		"husky": "^8.0.3",
+		"lerna": "^6.5.1",
 		"lint-staged": "^13.2.0",
 		"prettier": "^2.8.4",
 		"stylelint": "^15.3.0",
