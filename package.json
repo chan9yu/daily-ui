@@ -7,14 +7,15 @@
 	"license": "MIT",
 	"workspaces": {
 		"packages": [
-			"packages/*"
+			"packages/*",
+			"playgrounds/*"
 		]
 	},
 	"lint-staged": {
-		"**/*.scss": [
+		"packages/*.scss": [
 			"yarn stylelint:fix"
 		],
-		"**/*": [
+		"packages/*": [
 			"prettier --write ."
 		]
 	},
