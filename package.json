@@ -20,6 +20,7 @@
 		]
 	},
 	"scripts": {
+		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
 		"stylelint": "stylelint '**/*.scss'",
 		"stylelint:fix": "yarn stylelint --fix",

@@ -17,6 +17,7 @@
 		"library"
 	],
 	"scripts": {
+		"dev": "yarn build --watch",
 		"build": "rollup -c"
 	},
 	"devDependencies": {
