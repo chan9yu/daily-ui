@@ -20,7 +20,10 @@
 		]
 	},
 	"scripts": {
-		"dev": "yarn lerna run dev",
+		"dev": "yarn dev:react",
+		"dev:all": "yarn lerna run dev",
+		"dev:react": "yarn lerna run dev --scope=@daily/react-components --scope=@daily/styles --scope=@daily/playground_react",
+		"dev:vue": "yarn lerna run dev --scope=@daily/vue-components --scope=@daily/styles --scope=@daily/playground_vue",
 		"build": "yarn lerna run build",
 		"stylelint": "stylelint '**/*.scss'",
 		"stylelint:fix": "yarn stylelint --fix",
