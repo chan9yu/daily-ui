@@ -1,8 +1,12 @@
-import React from 'react';
-import { Button } from '@daily/react-components';
+import { Button, Color } from '@daily/react-components';
 
 const App = () => {
-	return <Button>Button</Button>;
+	return (
+		<div>
+			<Button>Button</Button>
+			<Color hexCode="#333" />
+		</div>
+	);
 };
 
 export default App;

@@ -1,0 +1,9 @@
+@each $size, $value in $spacing {
+	.#{$prefix}width--#{$size} {
+		width: $value;
+	}
+
+	.#{$prefix}height--#{$size} {
+		height: $value;
+	}
+}
