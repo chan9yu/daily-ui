@@ -1,0 +1,4 @@
+{
+	"packages/*": ["prettier --write ."],
+	"packages/*.scss": ["yarn stylelint:fix"]
+}

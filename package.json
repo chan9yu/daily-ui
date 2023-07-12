@@ -1,9 +1,9 @@
 {
 	"name": "@daily/root",
-	"version": "0.0.1",
 	"private": true,
-	"repository": "https://github.com/chan9yu/daily-design-system",
-	"author": "chan9yu <wry5533@gmail.com>",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "daily design system root repository",
 	"license": "MIT",
 	"workspaces": {
 		"packages": [
@@ -12,35 +12,48 @@
 		]
 	},
 	"lint-staged": {
-		"packages/*.scss": [
-			"yarn stylelint:fix"
-		],
 		"packages/*": [
 			"prettier --write ."
+		],
+		"packages/*.scss": [
+			"yarn stylelint:fix"
 		]
 	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
 	"scripts": {
-		"dev": "yarn dev:react",
-		"dev:all": "yarn lerna run dev",
-		"dev:react": "yarn lerna run dev --scope=@daily/react-components --scope=@daily/styles --scope=@daily/playground_react",
-		"dev:vue": "yarn lerna run dev --scope=@daily/vue-components --scope=@daily/styles --scope=@daily/playground_vue",
+		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
 		"stylelint": "stylelint '**/*.scss'",
 		"stylelint:fix": "yarn stylelint --fix",
+		"commit": "npx git-cz",
 		"prepare": "husky install",
-		"clean:modules": "./scripts/clean-node-modules.sh",
-		"update:dependencies": "./scripts/update-dependencies.sh"
+		"prepare:permission": "chmod +x .husky/*",
+		"clean:modules": "./scripts/clean-node-modules.sh"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.6.6",
+		"@commitlint/config-conventional": "^17.6.6",
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.0.0",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.44.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^5.0.0",
 		"husky": "^8.0.3",
-		"lerna": "^6.5.1",
-		"lint-staged": "^13.2.0",
-		"prettier": "^2.8.4",
-		"stylelint": "^15.3.0",
+		"lerna": "^7.1.3",
+		"lint-staged": "^13.2.3",
+		"prettier": "^3.0.0",
+		"stylelint": "^15.10.1",
 		"stylelint-config-prettier": "^9.0.5",
-		"stylelint-config-recommended-scss": "^9.0.1",
-		"stylelint-config-standard": "^31.0.0",
-		"stylelint-prettier": "^3.0.0",
-		"stylelint-scss": "^4.5.0"
+		"stylelint-config-recommended-scss": "^12.0.0",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-prettier": "^4.0.0",
+		"stylelint-scss": "^4.5.0",
+		"typescript": "^5.1.6"
 	}
 }
