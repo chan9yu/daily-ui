@@ -1,6 +1,6 @@
-## daily design system
+## daily ui
 
-daily design system
+daily ui
 
 <br />
 
